@@ -1,8 +1,37 @@
-﻿@{
+﻿@model MVC_Project1.Models.Product
+@{
     ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-{
-}
 
 
+
+<a class="product-item" href="#">
+    <img src="@Model.img" alt=" Iphone-12-pro-max-129gb" />
+    <div class="info">
+        <div class="product-name">
+            <h4>@Model.name</h4>
+        </div>
+        <strong>
+
+            <div class="box-p">
+                <p class="price-old black">@Model.Price₫</p>
+                <span class="percent">-14%</span>
+            </div>
+            <div class="prodcut-price">
+                17.990.000đ
+            </div>
+
+            <div class="item-rating">
+                <p>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"> </i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star">  </i>
+                    <i class="icon-star-dark"> </i>
+                </p>
+                <p class="item-rating-total">@Model.RatingValue</p>
+            </div>
+        </strong>
+    </div>
+</a>
