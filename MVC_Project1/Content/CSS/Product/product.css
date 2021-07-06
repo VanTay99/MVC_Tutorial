@@ -1,0 +1,62 @@
+﻿body {
+    margin: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+a {
+}
+
+.grid-item {
+    display: block;
+    cursor: pointer;
+    padding: 2px;
+    justify-self: stretch;
+    font-size: 1.5rem;
+}
+
+.grid-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+img {
+    max-width: 100%;
+    width: 200px;
+    height: 250px;
+}
+.product-name{
+    color:  blue;
+}
+.product-quality{
+    color: black;
+    font-style:oblique;
+}
+prodcut-price {
+    color: black;
+    font-style: oblique;
+}
+.grid-item .price-old {
+    text-decoration-line: line-through;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+}
+.grid-item .box-p {
+    margin-bottom: 5px;
+    color: black;
+    
+}
+.icon-star {
+    background-position: -205px -60px;
+    height: 12px;
+    width: 13px;
+}
