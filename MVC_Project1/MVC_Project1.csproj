@@ -187,6 +187,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DammioController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProductdetailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,7 +199,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Categories.css" />
+    <Content Include="Content\CSS\Product\product.css" />
+    <Content Include="Content\Images\iphone-11-%2838%29.jpg" />
+    <Content Include="Content\Images\iphone-12-pro-max.jpg" />
+    <Content Include="Content\Images\samsung-galaxy-a52-8gb-256gb.jpg" />
+    <Content Include="Content\Images\samsung-galaxy-s20-fan-edition-%282%29.jpg" />
+    <Content Include="Content\Images\vivo-y20s-%288%29.jpg" />
     <Content Include="Content\Styles.css" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
@@ -236,12 +243,14 @@
     <Content Include="Views\Dammio\About.cshtml" />
     <Content Include="Views\Dammio\Contact.cshtml" />
     <Content Include="Views\Dammio\Index.cshtml" />
-    <Content Include="Views\Dammio\Hello.cshtml" />
-    <Content Include="Views\Dammio\Login.cshtml" />
-    <Content Include="Views\Dammio\Categories.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Dammio\Product.cshtml" />
+    <Content Include="Views\Productdetail\Productdetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\CSS\Dammio\" />
+    <Folder Include="Content\CSS\Login\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
