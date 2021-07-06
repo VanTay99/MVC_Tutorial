@@ -44,7 +44,7 @@ namespace MVC_Project1.Controllers
 
             return View();
         }
-        public ActionResult Categories ()
+        public ActionResult Categories()
         {
             ViewBag.Message = "Categiries Page";
             return View();

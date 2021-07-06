@@ -14,6 +14,12 @@ namespace MVC_Project1
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Danh mục sản phẩm",
+                url: "danh-muc",
+                defaults: new { controller = "Dammio", action = "Categories" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Dammio", action = "Index", id = UrlParameter.Optional }
