@@ -11,8 +11,7 @@ namespace MVC_Project1.Controllers
         // GET: Productdetail
         public ActionResult Productdetail()
         {
-            var Iphonex = new Product() { name = "IPhone X", lname ="iphone-x",Price=17000000,RatingValue=100,img= "~/Content/Images/iphone-12-pro-max.jpg" };
-            return View(Iphonex);
+            return View();
         }
     }
 }

@@ -201,8 +201,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS\Product\product.css" />
+    <Content Include="Content\CSS\Product\productdetail.css" />
     <Content Include="Content\Images\iphone-11-%2838%29.jpg" />
     <Content Include="Content\Images\iphone-12-pro-max.jpg" />
+    <Content Include="Content\Images\iphone12%281%29.jpg" />
+    <Content Include="Content\Images\iphone12%282%29.jpg" />
+    <Content Include="Content\Images\iphone12%283%29.jpg" />
     <Content Include="Content\Images\samsung-galaxy-a52-8gb-256gb.jpg" />
     <Content Include="Content\Images\samsung-galaxy-s20-fan-edition-%282%29.jpg" />
     <Content Include="Content\Images\vivo-y20s-%288%29.jpg" />

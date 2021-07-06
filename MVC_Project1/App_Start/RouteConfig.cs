@@ -18,7 +18,13 @@ namespace MVC_Project1
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Dammio", action = "Product", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               name: "Chi tiet San Pham",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Productdetail", action = "Productdetail", id = UrlParameter.Optional }
+           );
             
+
         }
     }
 }

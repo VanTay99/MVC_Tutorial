@@ -1,37 +1,85 @@
-﻿@model MVC_Project1.Models.Product
-@{
-    ViewBag.Title = "View";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dammio</title>
+    @Styles.Render("~/Content/CSS/Product/productdetail.css")
+    @Scripts.Render("~/bundles/modernizr")
 
+</head>
 
-
-<a class="product-item" href="#">
-    <img src="@Model.img" alt=" Iphone-12-pro-max-129gb" />
-    <div class="info">
-        <div class="product-name">
-            <h4>@Model.name</h4>
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1">
+                            <img src="~/Content/Images/iphone-12-pro-max.jpg" alt="">
+                        </div>
+                        <div class="tab-pane" id="pic-2">
+                            <img src="~/Content/Images/iphone12(1).jpg" alt="Xanh dương">
+                        </div>
+                        <div class="tab-pane" id="pic-3">
+                            <img src="~/Content/Images/iphone12(2).jpg" alt="đen">
+                        </div>
+                        <div class="tab-pane" id="pic-4">
+                            <img src="~/Content/Images/iphone12(3).jpg" alt="trắng">
+                        </div>
+                    </div>
+                    <ul class="preview-thumbnail nav nav-tabs">
+                        <div class="menu-icon"><span>Menu</span></div>
+                        <li class="active">
+                            <a data-target="#pic-1" data-toggle="tab"><img src="~/Content/Images/iphone-12-pro-max.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a data-target="#pic-2" data-toggle="tab"><img src="~/Content/Images/iphone12(1).jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a data-target="#pic-3" data-toggle="tab"><img src="~/Content/Images/iphone12(2).jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a data-target="#pic-4" data-toggle="tab"><img  src="~/Content/Images/iphone12(3).jpg" alt=""></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">Điện Thoại Iphone-12</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                        </div> <span class="review-no">123 đánh giá</span>
+                               <p class="product-description">
+                                  <p> Máy mới 100% , chính hãng Apple Việt Nam.
+                                   CellphoneS hiện là đại lý bán lẻ uỷ quyền iPhone chính hãng VN/A của Apple Việt Nam</p> <br />
+                                   <p>Hộp bao gồm
+                                   Thân máy, cáp USB-C to Lightning, sách HDSD </p> <br />
+                                   <p>Bảo hành
+                                   Bảo hành 12 tháng tại trung tâm bảo hành chính hãng Apple Việt Nam. 1 ĐỔI 1 trong 30 ngày nếu có lỗi phần cứng nhà sản xuất.(Chi tiết)</p>
+                               </p>
+                    </div>
+                    <p class="product-description"></p>
+                    <h4 class="price">Giá bán :19.000.000đ</h4>
+                    <p class="discout">
+                        Giảm giá đến <strong>14%</strong>  <hr />
+                        <strong>Với Nhiều ưu đãi</strong>
+                    </p>
+                    
+                    <h5 class="colors">
+                        Màu: 
+                        <span class="color pink "></span> 
+                        <span class="color black"></span>
+                        <span class="color xam"></span>
+                    </h5>
+                    <div class="action">
+                        <a href="#" target="_blank">            
+                        <button class="add-to-cart btn btn-default" type="button">MUA NGAY</button>         
+                         </a>           
+                       
+                    </div>
+                </div>
+            </div>
         </div>
-        <strong>
-
-            <div class="box-p">
-                <p class="price-old black">@Model.Price₫</p>
-                <span class="percent">-14%</span>
-            </div>
-            <div class="prodcut-price">
-                17.990.000đ
-            </div>
-
-            <div class="item-rating">
-                <p>
-                    <i class="icon-star"></i>
-                    <i class="icon-star"> </i>
-                    <i class="icon-star"></i>
-                    <i class="icon-star">  </i>
-                    <i class="icon-star-dark"> </i>
-                </p>
-                <p class="item-rating-total">@Model.RatingValue</p>
-            </div>
-        </strong>
     </div>
-</a>
+</div> 
