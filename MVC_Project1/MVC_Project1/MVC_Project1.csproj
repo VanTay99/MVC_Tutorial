@@ -197,6 +197,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Categories.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
@@ -237,6 +238,7 @@
     <Content Include="Views\Dammio\Index.cshtml" />
     <Content Include="Views\Dammio\Hello.cshtml" />
     <Content Include="Views\Dammio\Login.cshtml" />
+    <Content Include="Views\Dammio\Categories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
