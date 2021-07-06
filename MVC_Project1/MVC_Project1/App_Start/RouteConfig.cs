@@ -16,7 +16,7 @@ namespace MVC_Project1
             routes.MapRoute(
                 name: "Danh mục sản phẩm",
                 url: "danh-muc",
-                defaults: new { controller = "Dammio", action = "Categories" }
+                defaults: new { controller = "Dammio", action = "Categories" } 
             );
 
             routes.MapRoute(
