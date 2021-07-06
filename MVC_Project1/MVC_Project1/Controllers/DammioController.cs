@@ -38,7 +38,7 @@ namespace MVC_Project1.Controllers
 
             return View();
         }
-        public ActionResult Login()
+        public ActionResult Login() 
         {
             ViewBag.Message = "Login Page";
 
