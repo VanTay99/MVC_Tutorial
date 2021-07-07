@@ -97,3 +97,7 @@ D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\MongoDB.Driver.Core.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\MongoDB.Driver.Legacy.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\System.Buffers.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Work\MWG\fresher\MVC_Tutorial\MVC_Project1\obj\Debug\MVC_Project1.csprojAssemblyReference.cache
+D:\Work\MWG\fresher\MVC_Tutorial\MVC_Project1\obj\Debug\MVC_Project1.csproj.CoreCompileInputs.cache
+D:\Work\MWG\fresher\MVC_Tutorial\MVC_Project1\obj\Debug\MVC_Project1.dll
+D:\Work\MWG\fresher\MVC_Tutorial\MVC_Project1\obj\Debug\MVC_Project1.pdb
