@@ -72,7 +72,6 @@ D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\System.Web.WebPages.Razor
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\Newtonsoft.Json.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\Antlr3.Runtime.pdb
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\obj\Debug\MVC_Project1.csproj.AssemblyReference.cache
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\obj\Debug\MVC_Project1.csproj.CoreCompileInputs.cache
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\obj\Debug\MVC_Project1.csproj.CopyComplete
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\obj\Debug\MVC_Project1.dll
@@ -97,3 +96,4 @@ D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\MongoDB.Driver.Core.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\MongoDB.Driver.Legacy.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\System.Buffers.xml
 D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\CongViec\MVC_Tutorial\MVC_Project1\MVC_Project1\obj\Debug\MVC_Project1.csproj.AssemblyReference.cache

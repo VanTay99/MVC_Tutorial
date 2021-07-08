@@ -11,19 +11,24 @@ namespace MVC_Project1
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Dammio", action = "Product", id = UrlParameter.Optional }
-            );
+               name: "ViewDetail",
+               url: "product/viewproduct/id",
+               defaults: new { controller = "Detail", action = "ViewDeTail" }
+               );
             routes.MapRoute(
-               name: "Chi tiet San Pham",
-               url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Productdetail", action = "Productdetail", id = UrlParameter.Optional }
-           );
+               name: "ViewProduct",
+               url: "product/viewproduct",
+               defaults: new { controller = "HomeShop", action = "ViewProduct" }
+               );
+            routes.MapRoute(
+                 name: "Default",
+                 url: "{controller}/{action}/{id}",
+                 defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }
+                 );
             
+            
+
 
         }
     }
