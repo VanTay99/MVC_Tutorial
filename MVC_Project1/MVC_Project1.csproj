@@ -204,7 +204,6 @@
     <Content Include="Content\CSS\bundle.min.css">
       <DependentUpon>bundle.css</DependentUpon>
     </Content>
-    <Content Include="Content\CSS\Product\bundle1.css" />
     <Content Include="Content\CSS\ViewDetail.css" />
     <Content Include="Content\CSS\ViewProduct.css" />
     <Content Include="Content\Images\iphone-11-%2838%29.jpg" />
