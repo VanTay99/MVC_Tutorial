@@ -11,7 +11,7 @@
    {
        <div class="grid-item">
            <a class=" product-item"
-               @{ var route = "/Detail/ViewDetail/" + product.Id;}
+               @{ var route = "san-pham-"+ product.lname+ "-"+ product.Id;}
                href="@route">
                @{ var thumbnail = product.url;}
                <img src="@thumbnail" />

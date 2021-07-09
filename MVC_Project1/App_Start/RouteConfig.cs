@@ -13,7 +13,7 @@ namespace MVC_Project1
         {
             routes.MapRoute(
                name: "ViewDetail",
-               url: "product/viewproduct/id",
+               url: "san-pham-{lname}-{Id}",
                defaults: new { controller = "Detail", action = "ViewDeTail" }
                );
             routes.MapRoute(

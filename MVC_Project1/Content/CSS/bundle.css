@@ -371,3 +371,19 @@ input {
     font-weight: bold;
     font-size: 15px;
 }
+.endow{
+    background: rgb(239, 239, 239);
+    padding-bottom:5px;
+    padding-top: 5px;
+}
+.description{
+    font-size:15px;
+    font-style:italic
+}
+.img-fluid {
+    max-width: 100%;
+    border-style: none;
+    width: 50px;
+    height: 13px;
+    
+}

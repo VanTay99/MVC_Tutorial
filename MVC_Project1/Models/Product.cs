@@ -13,14 +13,14 @@ namespace MVC_Project1.Models
         public string brand { get; set; }
         //Tên sản phẩm
         public string name { get; set; }
-      
+        public string lname { get; set; }
         //Hình Ảnh minh họa
         public string url { get; set; }
         //Gía Sản phẩm
         public int Price { get; set; }
         //Thông tin sản phẩm
         public string Description { get; set; }
-
+        public int valueRating { get; set; }
        
         
         
