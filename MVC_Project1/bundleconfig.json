@@ -22,9 +22,9 @@
   {
     "outputFileName": "Content/CSS/style.css",
     "inputFiles": [
-      "Content/CSS/header-footer.css",
       "Content/CSS/ViewProduct.css",
-      "Content/CSS/ViewDetail.css"
+      "Content/CSS/ViewDetail.css",
+      "Content/CSS/header-footer.css"
     ]
   }
 ]
