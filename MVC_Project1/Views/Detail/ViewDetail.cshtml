@@ -1,0 +1,65 @@
+﻿@model MVC_Project1.Models.Product
+@{ ViewBag.Title = "Detail"; }
+
+@section css{
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+}
+
+<div class="grid-container">
+    <div class="grid-item1">
+        <img src="@Model.url" alt="@Model.name" />
+    </div>
+    <div class="grid-item2">
+        <div class="header-info">
+            <div class="header-info-item" id="header-info-item1">
+                <div>
+                    <span>Hãng:@Model.brand</span>
+                </div>
+                <div class="product-name">
+                    <span id="name">@Model.name</span>
+                </div>
+                <div>
+                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
+                </div>
+            </div>
+            <div class="header-info-item" id="header-info-item2">
+                
+            </div>
+        </div>
+        <div class="body-info">
+            <div class="body-info-item" id="body-info-item1">
+                <div class="price-and-icon">
+                    <div class="product-price">
+                        <span id="price">@string.Format("{0:0.000}", @Model.Price) <span style="text-decoration: underline">đ</span></span>
+                    </div>
+                    <div class="product-icon">
+                        <div class="icon-content">
+                            Tiki card: Hoàn tiền 15% tối đa 600k/tháng
+                        </div>
+                        <div class="icon-content">
+                            FREESHIP: Không giới hạn, tự động áp dụng
+                        </div>
+                    </div>
+                </div>
+                <div class="product-option">
+                </div>
+                <hr />
+                <div class="note-for-customer">
+                    Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
+                </div>
+                <hr />
+                <div class="quantily-input">
+                    <p class="quantity-label">Số lượng</p>
+                    <div class="group-input">
+                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty) &amp; qty > 1 ) result.value--;return false;" type='button' value='-' />
+                        <input id='quantity' min='1' name='quantity' type='text' value='1' />
+                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;" type='button' value='+' />
+                    </div>
+                    <div>
+                        <button class="buy-btn">Chọn mua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
