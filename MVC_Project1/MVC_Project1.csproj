@@ -204,6 +204,12 @@
     <Content Include="Content\CSS\bundle.min.css">
       <DependentUpon>bundle.css</DependentUpon>
     </Content>
+    <Content Include="Content\CSS\header-footer.css" />
+    <Content Include="Content\CSS\Product\bundle1.css" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\CSS\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="Content\CSS\ViewDetail.css" />
     <Content Include="Content\CSS\ViewProduct.css" />
     <Content Include="Content\Images\iphone-11-%2838%29.jpg" />
@@ -214,6 +220,7 @@
     <Content Include="Content\Images\iphone12%283%29.jpg" />
     <Content Include="Content\Images\iphone12Promax.jpg" />
     <Content Include="Content\Images\Logo.jpg" />
+    <Content Include="Content\Images\logo1.jpg" />
     <Content Include="Content\Images\oppo-reno-5_3_.jpg" />
     <Content Include="Content\Images\oppoA93.png" />
     <Content Include="Content\Images\samsung-galaxy-a52-8gb-256gb.jpg" />
