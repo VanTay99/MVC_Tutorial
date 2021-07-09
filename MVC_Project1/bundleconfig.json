@@ -18,5 +18,13 @@
       "Content/CSS/ViewProduct.css",
       "Content/CSS/ViewDetail.css"
     ]
+  },
+  {
+    "outputFileName": "Content/CSS/style.css",
+    "inputFiles": [
+      "Content/CSS/header-footer.css",
+      "Content/CSS/ViewProduct.css",
+      "Content/CSS/ViewDetail.css"
+    ]
   }
 ]
