@@ -291,12 +291,31 @@ input {
     color: rgb(255, 255, 255);
     height: 50px;
     width: 300px;
-    background-color: rgb(255, 57, 69);
+    background-color: rgb(13, 92, 182);
     border-radius: 8px;
     font-size: 16px;
 }
 
     .buy-btn:hover {
-        background-color: rgba(255, 57, 69, 0.8);
+        background-color: #46ce18;
     }
-
+.brand {
+    font-weight: bold;
+    font-size: 15px;
+}
+.endow{
+    background: rgb(239, 239, 239);
+    padding-bottom:5px;
+    padding-top: 5px;
+}
+.description{
+    font-size:15px;
+    font-style:italic
+}
+.img-fluid {
+    max-width: 100%;
+    border-style: none;
+    width: 50px;
+    height: 13px;
+    
+}
