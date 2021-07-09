@@ -186,10 +186,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DammioController.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
+    <Compile Include="Controllers\HomeShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +200,38 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Categories.css" />
+    <Content Include="Content\CSS\bundle.css" />
+    <Content Include="Content\CSS\bundle.min.css">
+      <DependentUpon>bundle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\header-footer.css" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\CSS\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CSS\ViewDetail.css" />
+    <Content Include="Content\CSS\ViewProduct.css" />
+    <Content Include="Content\Images\iphone-11-%2838%29.jpg" />
+    <Content Include="Content\Images\iphone-12-pro-max.jpg" />
+    <Content Include="Content\Images\iphone11.jpg" />
+    <Content Include="Content\Images\iphone12%281%29.jpg" />
+    <Content Include="Content\Images\iphone12%282%29.jpg" />
+    <Content Include="Content\Images\iphone12%283%29.jpg" />
+    <Content Include="Content\Images\iphone12Promax.jpg" />
+    <Content Include="Content\Images\Logo.jpg" />
+    <Content Include="Content\Images\logo1.jpg" />
+    <Content Include="Content\Images\oppo-reno-5_3_.jpg" />
+    <Content Include="Content\Images\oppoA93.png" />
+    <Content Include="Content\Images\samsung-galaxy-a52-8gb-256gb.jpg" />
+    <Content Include="Content\Images\samsung-galaxy-s20-fan-edition-%282%29.jpg" />
+    <Content Include="Content\Images\samsunggalaxynote20.jpg" />
+    <Content Include="Content\Images\samsungs20.jpg" />
+    <Content Include="Content\Images\vivo-v21-5g-2.jpg" />
+    <Content Include="Content\Images\vivo-x60-pro-8.jpg" />
+    <Content Include="Content\Images\vivo-y20s-%288%29.jpg" />
+    <Content Include="Content\Images\xiaomi-note10.jpg" />
+    <Content Include="Content\Images\xiaominote10pro_.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
@@ -205,12 +239,12 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="mongocrypt.dll" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="libmongocrypt.so" />
     <Content Include="libmongocrypt.dylib" />
+    <None Include="bundleconfig.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -233,16 +267,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Dammio\About.cshtml" />
-    <Content Include="Views\Dammio\Contact.cshtml" />
-    <Content Include="Views\Dammio\Index.cshtml" />
-    <Content Include="Views\Dammio\Hello.cshtml" />
-    <Content Include="Views\Dammio\Login.cshtml" />
-    <Content Include="Views\Dammio\Categories.cshtml" />
+    <Content Include="Views\HomeShop\Index.cshtml" />
+    <Content Include="Views\HomeShop\ViewProduct.cshtml" />
+    <Content Include="Views\Detail\ViewDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
