@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title- PhoneShop</title>
     @RenderSection("css", required: false)
-    <link href="~/Content/CSS/style.css" rel="stylesheet"/>
+    @*<link href="~/Content/desktop/css/style.css" rel="stylesheet"/>*@
 </head>
 <body>
-        @* Start Header*@
-    <header id="header"class="header fixed-top">
+    @* Start Header*@
+    <header id="header" class="header fixed-top">
         <div class=" container-fluid">
             <a href="#" class="logo">
                 <span>PhoneShop</span>
             </a>
-            
+
             <nav id="navbar" class="navbar">
                 <ul>
 
@@ -35,9 +35,11 @@
             <div class="copyright">
                 &copy; Copyright <strong><span>Phone-Shop</span></strong>. All Rights Reserved
             </div>
-            
+
         </div>
     </footer>
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+

@@ -26,10 +26,6 @@ namespace MVC_Project1
                  url: "{controller}/{action}/{id}",
                  defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }
                  );
-            
-            
-
-
         }
     }
 }

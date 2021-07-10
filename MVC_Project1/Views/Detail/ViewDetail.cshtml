@@ -2,7 +2,8 @@
 @{ ViewBag.Title = "Detail"; }
 
 @section css{
-    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <link href="~/Content/desktop/css/phonestore.css?v=@(DateTime.Now.ToString("hhmmss"))" rel="stylesheet"/>
+   
 }
 
 <div class="grid-container">
@@ -26,17 +27,17 @@
                 </div>
             </div>
             <div class="header-info-item" id="header-info-item2">
-                
+
             </div>
         </div>
         <div class="body-info">
             <div class="body-info-item" id="body-info-item1">
                 <div class="price-and-icon">
                     <div class="product-price">
-                        <span id="price">@string.Format("{0:0.000}", @Model.Price) <span style="text-decoration: underline">đ</span></span>
+                        <span id="price">@string.Format("{0:0.000}", @Model.Price) đ </span>
                     </div>
                     <div class="product-icon">
-                        
+
                         <div class="description">
                             @Model.Description
                         </div>
@@ -44,17 +45,17 @@
                     <div class="endow">
                         <div class="icon-content">
                             <a>
-                                <img class="img-fluid" src=" ~/Content/Images/tikicard.png" /><p> Hoàn tiền 15% tối đa 600k/tháng</p>
+                                <img class="img-fluid" src="~/Content/desktop/images/tikicard.png" /><p> Hoàn tiền 15% tối đa 600k/tháng</p>
                             </a>
                         </div>
                         <div class="icon-content">
-                            <img class="img-fluid" src="~/Content/Images/freeship.png" /> <p>Không giới hạn, tự động áp dụng</p>
+                            <img class="img-fluid" src="~/Content/desktop/images/freeship.png" /> <p>Không giới hạn, tự động áp dụng</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-option">
                 </div>
-                
+
                 <div class="quantily-input">
                     <p class="quantity-label">Số lượng</p>
                     <div class="group-input">

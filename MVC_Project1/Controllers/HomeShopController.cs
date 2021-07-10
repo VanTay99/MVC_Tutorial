@@ -18,10 +18,14 @@ namespace MVC_Project1.Controllers
             var products = GetListProducts();
             return View(products);
         }
-      
+
 
         // GET: Product/detail ->  Redirecto to Home page
-       
+
+        /// <summary>
+        /// Lấy ds sản phẩ trang chủ ...
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetListProducts()
         {
             var products = new List<Product>
@@ -30,8 +34,8 @@ namespace MVC_Project1.Controllers
                 {
                     Id="1",
                     brand="Apple",
-                    name="Iphone 12 Pro Max| Chính Hãng VN/A",
-                    url="/Content/Images/iphone12_1.jpg",
+                    name="Iphone 12 Pro Max",
+                    url="/Content/desktop/images/iphone12_1.jpg",
                     Price=28950,
                     Description="Máy mới chính hãng Apple Việt Nam",
                     valueRating=4,
@@ -42,8 +46,8 @@ namespace MVC_Project1.Controllers
                 {
                     Id="2",
                     brand="Apple",
-                    name="Iphone 11 | Chính Hãng VN/A",
-                    url="/Content/Images/iphone11.jpg",
+                    name="Iphone 11",
+                    url="/Content/desktop/images/iphone11.jpg",
                     Price=14800,
                     Description=" Máy mới chính hãng Apple Việt Nam",
                     valueRating=4,
@@ -53,8 +57,8 @@ namespace MVC_Project1.Controllers
                 {
                     Id="3",
                     brand="SamSung",
-                    name="Samsung Galaxy Note 20 Ultra 5G",
-                    url="/Content/Images/galaxynote20.jpg",
+                    name="Samsung Galaxy Note 20 ",
+                    url="/Content/desktop/images/galaxynote20.jpg",
                     Price=19950,
                     Description=" Máy mới chính hãng SamSung Việt Nam",
                     valueRating=5,
@@ -64,8 +68,8 @@ namespace MVC_Project1.Controllers
                 {
                     Id="4",
                     brand="SamSung",
-                    name="Samsung Galaxy S20 FE 256GB(FAN Edition",
-                    url="/Content/Images/samsungs20.jpg",
+                    name="Samsung Galaxy S20 FE",
+                    url="/Content/desktop/images/samsungs20.jpg",
                     Price=12950,
                     Description=" Máy mới chính hãng Samsung Việt Nam",
                     valueRating=5,
@@ -76,7 +80,7 @@ namespace MVC_Project1.Controllers
                     Id="5",
                     brand="Xiaomi",
                     name="Xaomi Redmi Note 10",
-                    url="/Content/Images/xiaominote10.jpg",
+                    url="/Content/desktop/images/xiaominote10.jpg",
                     Price=4950,
                     Description=" Máy mới chính hãng Xiaomi Việt Nam",
                     valueRating=4,
@@ -87,8 +91,8 @@ namespace MVC_Project1.Controllers
                 {
                      Id="6",
                     brand="Xiaomi",
-                    name="Xaomi Redmi Note 10 Pro 8GB",
-                    url="/Content/Images/xiaominote10pro.jpg",
+                    name="Xaomi Redmi Note 10 Pro ",
+                    url="/Content/desktop/images/xiaominote10pro.jpg",
                     Price=6950,
                     Description=" Máy mới chính hãng Xiaomi Việt Nam",
                     valueRating=4,
@@ -99,7 +103,7 @@ namespace MVC_Project1.Controllers
                     Id="7",
                     brand="ViVo",
                     name="Vivo X60 Pro 5G",
-                    url="/Content/Images/vivo-x60-pro-8.jpg",
+                    url="/Content/desktop/images/vivo-x60-pro-8.jpg",
                     Price=14950,
                     Description=" Máy mới chính hãng ViVo Việt Nam",
                     valueRating=4,
@@ -110,7 +114,7 @@ namespace MVC_Project1.Controllers
                     Id="8",
                     brand="ViVo",
                     name="ViVo V21 5G",
-                    url="/Content/Images/vivo-v21-600x600.jpg",
+                    url="/Content/desktop/images/vivo-v21-600x600.jpg",
                     Price=8950,
                     Description=" Máy mới chính hãng ViVo Việt Nam",
                     valueRating=5,
@@ -121,7 +125,7 @@ namespace MVC_Project1.Controllers
                     Id="9",
                     brand="Oppo",
                     name="Oppo Reno 5",
-                    url="/Content/Images/opporeno5.jpg",
+                    url="/Content/desktop/images/opporeno5.jpg",
                     Price=8950,
                     Description=" Máy mới chính hãng Oppo Việt Nam",
                     valueRating=4,
@@ -132,7 +136,7 @@ namespace MVC_Project1.Controllers
                     Id="10",
                     brand="Oppo",
                     name="Oppo A93",
-                    url="/Content/Images/oppoA93.jpg",
+                    url="/Content/desktop/images/oppoA93.jpg",
                     Price=28950,
                     Description=" Máy mới chính hãng Oppo Việt Nam",
                     valueRating=5,
@@ -142,5 +146,22 @@ namespace MVC_Project1.Controllers
             };
             return products;
         }
+
+        /*#region Demo partialview
+        public ActionResult DemoPartialView()
+        {
+            return PartialView();
+        }
+        /// <summary>
+        /// Product detail
+        /// </summary>
+        /// <param name="productid"></param>
+        /// <returns></returns>
+        public ActionResult demo2(string productid)
+        {
+            var product = GetListProducts().FirstOrDefault(p => p.Id == productid);
+            return PartialView(product);
+        }
+        #endregion*/
     }
 }
