@@ -2,7 +2,8 @@
 @{ ViewBag.Title = "Detail"; }
 
 @section css{
-    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <link href="~/Content/desktop/css/phonestore.css?v=@(DateTime.Now.ToString("hhmmss"))" rel="stylesheet"/>
+   
 }
 
 <div class="grid-container">
@@ -13,7 +14,7 @@
         <div class="header-info">
             <div class="header-info-item" id="header-info-item1">
                 <div>
-                    <span>Hãng:@Model.brand</span>
+                    <span class="brand">Hãng: @Model.brand</span>
                 </div>
                 <div class="product-name">
                     <span id="name">@Model.name</span>
@@ -21,33 +22,40 @@
                 <div>
                     <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
                 </div>
+                <div>
+                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Số sao đánh giá sao đánh giá @Model.valueRating</span>
+                </div>
             </div>
             <div class="header-info-item" id="header-info-item2">
-                
+
             </div>
         </div>
         <div class="body-info">
             <div class="body-info-item" id="body-info-item1">
                 <div class="price-and-icon">
                     <div class="product-price">
-                        <span id="price">@string.Format("{0:0.000}", @Model.Price) <span style="text-decoration: underline">đ</span></span>
+                        <span id="price">@string.Format("{0:0.000}", @Model.Price) đ </span>
                     </div>
                     <div class="product-icon">
+
+                        <div class="description">
+                            @Model.Description
+                        </div>
+                    </div>
+                    <div class="endow">
                         <div class="icon-content">
-                            Tiki card: Hoàn tiền 15% tối đa 600k/tháng
+                            <a>
+                                <img class="img-fluid" src="~/Content/desktop/images/tikicard.png" /><p> Hoàn tiền 15% tối đa 600k/tháng</p>
+                            </a>
                         </div>
                         <div class="icon-content">
-                            FREESHIP: Không giới hạn, tự động áp dụng
+                            <img class="img-fluid" src="~/Content/desktop/images/freeship.png" /> <p>Không giới hạn, tự động áp dụng</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-option">
                 </div>
-                <hr />
-                <div class="note-for-customer">
-                    Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
-                </div>
-                <hr />
+
                 <div class="quantily-input">
                     <p class="quantity-label">Số lượng</p>
                     <div class="group-input">

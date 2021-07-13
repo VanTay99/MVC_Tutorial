@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title- PhoneShop</title>
     @RenderSection("css", required: false)
-    <link href="~/Content/CSS/style.css" rel="stylesheet"/>
+    <link href="~/Content/desktop/css/phonestore.css" rel="stylesheet" />
 </head>
 <body>
-        @* Start Header*@
-    <header id="header"class="header fixed-top">
+    @* Start Header*@
+    <header id="header" class="header fixed-top">
         <div class=" container-fluid">
-            <a href="index.cshtml" class="logo">
+            <a href="#" class="logo">
                 <span>PhoneShop</span>
             </a>
-            
+
             <nav id="navbar" class="navbar">
                 <ul>
 
@@ -30,14 +30,9 @@
     <div class="container body-content">
         @RenderBody()
     </div>
-    <footer id=" footer" class="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Phone-Shop</span></strong>. All Rights Reserved
-            </div>
-            
-        </div>
-    </footer>
+    @Html.Partial("~/Views/HomeShop/DemoPartialviewfooter.cshtml");
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
