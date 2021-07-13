@@ -18,15 +18,15 @@
                @{ var route = "san-pham-" + product.lname + "-" + product.Id;}
                href="@route">
                 @{ var thumbnail = product.url;}
-                <img src="@thumbnail" />
-                <div class="info">
+                <img class="img-product"src="@thumbnail" />
+                
                     <div class="product-name">
                         @product.name
                     </div>
                     <div class="product-price">
                         @string.Format("{0:0.000}", product.Price) đ
                     </div>
-                </div>
+                
 
             </a>
         </div>
