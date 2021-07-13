@@ -279,8 +279,7 @@
     <Content Include="Views\HomeShop\Index.cshtml" />
     <Content Include="Views\HomeShop\ViewProduct.cshtml" />
     <Content Include="Views\Detail\ViewDetail.cshtml" />
-    <Content Include="Views\HomeShop\DemoPartialView.cshtml" />
-    <Content Include="Views\HomeShop\demo2.cshtml" />
+    <Content Include="Views\HomeShop\DemoPartialviewfooter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

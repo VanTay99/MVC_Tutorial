@@ -52,7 +52,7 @@ namespace MVC_Project1.Controllers
                     Description=" Máy mới chính hãng Apple Việt Nam",
                     valueRating=4,
                     lname="iphone11"
-        },
+                },
                 new Product
                 {
                     Id="3",
@@ -62,8 +62,8 @@ namespace MVC_Project1.Controllers
                     Price=19950,
                     Description=" Máy mới chính hãng SamSung Việt Nam",
                     valueRating=5,
-                    lname="samsung-galaxy-note-20"
-        },
+                    lname="samsunggalaxynote20"
+                },
                 new Product
                 {
                     Id="4",
@@ -73,7 +73,7 @@ namespace MVC_Project1.Controllers
                     Price=12950,
                     Description=" Máy mới chính hãng Samsung Việt Nam",
                     valueRating=5,
-                    lname="samsung-galaxy-s20"
+                    lname="samsunggalaxys20"
                 },
                 new Product
                 {
@@ -84,7 +84,7 @@ namespace MVC_Project1.Controllers
                     Price=4950,
                     Description=" Máy mới chính hãng Xiaomi Việt Nam",
                     valueRating=4,
-                    lname="xiaomi-redmi-note-10"
+                    lname="xiaomiredminote10"
 
                 },
                 new Product
@@ -96,7 +96,7 @@ namespace MVC_Project1.Controllers
                     Price=6950,
                     Description=" Máy mới chính hãng Xiaomi Việt Nam",
                     valueRating=4,
-                    lname="xiaomi-redmi-note-10-pro"
+                    lname="xiaomiredminote10pro"
                 },
                 new Product
                 {
@@ -107,7 +107,7 @@ namespace MVC_Project1.Controllers
                     Price=14950,
                     Description=" Máy mới chính hãng ViVo Việt Nam",
                     valueRating=4,
-                    lname="vivo-x60-pro-5g"
+                    lname="vivox60pro5g"
                 },
                 new Product
                 {
@@ -118,7 +118,7 @@ namespace MVC_Project1.Controllers
                     Price=8950,
                     Description=" Máy mới chính hãng ViVo Việt Nam",
                     valueRating=5,
-                    lname="vivo-v21-5g"
+                    lname="vivov215g"
                 },
                 new Product
                 {
@@ -129,7 +129,7 @@ namespace MVC_Project1.Controllers
                     Price=8950,
                     Description=" Máy mới chính hãng Oppo Việt Nam",
                     valueRating=4,
-                    lname="oppo-reno-5"
+                    lname="opporeno5"
                 },
                 new Product
                 {
@@ -140,28 +140,17 @@ namespace MVC_Project1.Controllers
                     Price=28950,
                     Description=" Máy mới chính hãng Oppo Việt Nam",
                     valueRating=5,
-                    lname="oppo-a93"
+                    lname="oppoa93"
                 }
 
             };
             return products;
         }
-
-        /*#region Demo partialview
-        public ActionResult DemoPartialView()
+        #region Demo partialview (footer)
+        public ActionResult DemoPartialviewfooter()
         {
             return PartialView();
         }
-        /// <summary>
-        /// Product detail
-        /// </summary>
-        /// <param name="productid"></param>
-        /// <returns></returns>
-        public ActionResult demo2(string productid)
-        {
-            var product = GetListProducts().FirstOrDefault(p => p.Id == productid);
-            return PartialView(product);
-        }
-        #endregion*/
+        #endregion
     }
 }
