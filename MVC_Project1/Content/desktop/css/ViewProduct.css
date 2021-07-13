@@ -1,0 +1,152 @@
+﻿body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+}
+
+    a:link {
+        text-decoration: none;
+    }
+
+.grid-item {
+    display: block;
+    cursor: pointer;
+    padding: 2px;
+    justify-self: stretch;
+    font-size: 0.6rem;
+    border:#00ffff 2px solid;
+   
+}
+
+    .grid-item:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+img {
+    width: 100%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+
+.product-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 0px 4px;
+    line-height: 20px;
+    word-break: break-word;
+    color: rgb(36, 36, 36);
+}
+
+.product-price {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0px 8px 0px 0px;
+    color: rgb(36, 36, 36);
+    font-weight: bold;
+}
+
+
+/*#region Responsive*/
+
+
+@media only screen and (max-width: 980px) {
+    .grid-container {
+        grid-template-columns: auto auto auto auto;
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .grid-container {
+        grid-template-columns: auto auto auto ;
+
+    }
+    .product-name {
+        font-size: 20px;
+        
+    }
+    .product-price {
+        font-size: 20px;
+    }
+    .buy-btn {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+    .grid-item1 {
+        width: 450px;
+        height: 450px;
+        grid-column: 1 / 6;
+    }
+
+    .grid-item2 {
+        grid-column: 1 / 2;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+    .grid-item1 {
+        width: 450px;
+        height: 450px;
+        grid-column: 1 / 6;
+    }
+
+    .grid-item2 {
+        grid-column: 1 / 2;
+    }
+
+}
+
