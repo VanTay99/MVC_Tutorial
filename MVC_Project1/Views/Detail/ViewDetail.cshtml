@@ -2,11 +2,11 @@
 @{ ViewBag.Title = "Detail"; }
 
 @section css{
-    <link href="~/Content/desktop/css/phonestore.css?v=@(DateTime.Now.ToString("hhmmss"))" rel="stylesheet"/>
-   
-}
+    <link href="~/Content/desktop/css/phonestore.css?v=@(DateTime.Now.ToString("hhmmss"))" rel="stylesheet" />
 
-<div class="grid-container">
+}
+<p class="title-detail">Chi tiết sản phẩm</p>
+<div class="grid-container-detail">
     <div class="grid-item1">
         <img src="@Model.url" alt="@Model.name" />
     </div>
@@ -25,9 +25,6 @@
                 <div>
                     <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Số sao đánh giá sao đánh giá @Model.valueRating</span>
                 </div>
-            </div>
-            <div class="header-info-item" id="header-info-item2">
-
             </div>
         </div>
         <div class="body-info">
@@ -53,21 +50,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-option">
-                </div>
+               
 
                 <div class="quantily-input">
                     <p class="quantity-label">Số lượng</p>
                     <div class="group-input">
-                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty) &amp; qty > 1 ) result.value--;return false;" type='button' value='-' />
-                        <input id='quantity' min='1' name='quantity' type='text' value='1' />
-                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;" type='button' value='+' />
+                        <input onclick="giam()" type='button' value='-' />
+                        <input id="result" onchange="handleChange(this);" type="text" value="1" />
+                        <input onclick="tang()" type='button' value='+' />
                     </div>
                     <div>
                         <button class="buy-btn">Chọn mua</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </div>
+@section scripts{
+    <script src="~/Scripts/js/viewdetail.js"> </script>
+}

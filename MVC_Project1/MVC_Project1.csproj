@@ -211,6 +211,7 @@
     </Content>
     <Content Include="Content\desktop\css\ViewDetail.css" />
     <Content Include="Content\desktop\css\ViewProduct.css" />
+    <Content Include="Content\desktop\images\banner-top-6-didongviet.jpg" />
     <Content Include="Content\desktop\images\freeship.png" />
     <Content Include="Content\desktop\images\galaxynote20.jpg" />
     <Content Include="Content\desktop\images\galaxys20.jpg" />
@@ -224,6 +225,7 @@
     <Content Include="Content\desktop\images\iphone12Promax.jpg" />
     <Content Include="Content\desktop\images\iphone12_1.jpg" />
     <Content Include="Content\desktop\images\Logo.jpg" />
+    <Content Include="Content\desktop\images\logo.png" />
     <Content Include="Content\desktop\images\oppo-reno-5_3_.jpg" />
     <Content Include="Content\desktop\images\oppoa93.jpg" />
     <Content Include="Content\desktop\images\oppoA93.png" />
@@ -264,6 +266,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\viewdetail.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

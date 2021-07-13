@@ -12,37 +12,38 @@ body {
     justify-items: stretch;
     justify-content: stretch;
     align-content: stretch;
+    padding-left:2em;
+    padding-right:2em;
 }
-
-a {
-    width: 100%;
-    height: 100%;
-}
-
-    a:link {
-        text-decoration: none;
-    }
-
 .grid-item {
     display: block;
     cursor: pointer;
     padding: 2px;
     justify-self: stretch;
     font-size: 0.6rem;
-    border:#00ffff 2px solid;
-   
+    border: #00ffff 2px solid;
+}
+.product-item a {
+    width: 100%;
+    height: 100%;
 }
 
-    .grid-item:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+.product-item a:link {
+    text-decoration: none;
+}
 
-img {
+.product-item img {
     width: 100%;
     height: 70%;
     margin-left: auto;
     margin-right: auto;
 }
+
+.grid-item:hover {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 
 .info {
     margin-left: 4px;
@@ -67,23 +68,34 @@ img {
     color: rgb(36, 36, 36);
     font-weight: bold;
 }
+.title-product{
+    color: black;
+    font-size:30px;
+    font-family:Tahoma;
+    font-weight :bold;
+}
 
 
-/*#region Responsive*/
+/*region Responsive*/
 
 
-@media only screen and (max-width: 980px) {
+@media (min-width:980px) and (max-width:1350px) {
     .grid-container {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto;
     }
     
-
-
 }
 
 @media only screen and (max-width: 720px) {
     .grid-container {
         grid-template-columns: auto auto auto auto;
+    }
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 16px;
     }
 }
 
@@ -93,14 +105,11 @@ img {
 
     }
     .product-name {
-        font-size: 20px;
+        font-size: 14px;
         
     }
     .product-price {
-        font-size: 20px;
-    }
-    .buy-btn {
-        width: 150px;
+        font-size: 14px;
     }
 }
 
@@ -116,15 +125,6 @@ img {
     .product-price {
         font-size: 14px;
     }
-    .grid-item1 {
-        width: 450px;
-        height: 450px;
-        grid-column: 1 / 6;
-    }
-
-    .grid-item2 {
-        grid-column: 1 / 2;
-    }
 }
 
 @media only screen and (max-width: 360px) {
@@ -132,22 +132,13 @@ img {
         grid-template-columns: auto auto;
     }
     .product-name {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .product-price {
-        font-size: 12px;
+        font-size: 10px;
     }
-    .grid-item1 {
-        width: 450px;
-        height: 450px;
-        grid-column: 1 / 6;
-    }
-
-    .grid-item2 {
-        grid-column: 1 / 2;
-    }
-
+    
 }
 
 
@@ -157,7 +148,7 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
-.grid-container {
+.grid-container-detail {
     background-color: white;
     padding-bottom: 16px;
     display: grid;
@@ -174,6 +165,11 @@ body {
     grid-column: 1 / 2;
     justify-self: stretch;
 }
+    .grid-item1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 .grid-item2 {
     margin: 16px 0px 8px 0px;
@@ -237,7 +233,7 @@ img {
 .body-info {
     display: grid;
     padding: 16px 8px 8px 0px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: auto auto;
     justify-content: space-between;
     column-gap: 8px;
 }
@@ -252,120 +248,7 @@ img {
     grid-template-rows: 43% 40%;
 }
 
-.seller-widget {
-    border-radius: 4px;
-    box-shadow: rgb(242, 242, 242);
-    padding: 8px;
-}
 
-.seller-info {
-    display: grid;
-    grid-template-columns: 25% auto;
-}
-
-.seller-logo {
-    width: 44px;
-    height: 44px;
-}
-
-    .seller-logo img {
-        border-radius: 50%;
-    }
-
-.seller-name {
-    align-self: center;
-}
-
-.seller-detail {
-    margin-top: 8px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-}
-
-#seller-detail-review {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
-}
-
-#seller-detail-follower {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
-}
-
-.seller-detail-title {
-    font-size: 15px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-}
-
-.seller-detail-subtitle {
-    font-size: 11px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.45;
-    letter-spacing: normal;
-    color: rgb(120, 120, 120);
-}
-
-.seller-action {
-    margin-top: 8px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-}
-
-.seller-action-item {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(13, 92, 182);
-    border-radius: 4px;
-    border: 1px solid rgb(13, 92, 182);
-    width: 90%;
-    padding: 8px;
-}
-
-.customer-benifits {
-    padding: 8px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-items: center;
-    border-radius: 4px;
-    box-shadow: rgb(242, 242, 242);
-    padding: 8px;
-}
-
-.benifit-icon {
-    width: 30px;
-    height: 30px;
-}
-
-.benifits-item {
-    display: grid;
-    grid-template-rows: 30% auto;
-    justify-items: center;
-    align-items: center;
-    justify-self: center;
-}
-
-.action-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.price-and-icon {
-    padding: 12px;
-    padding-left: 24px;
-    background-color: rgb(250, 250, 250);
-}
 
 .icon-content {
     margin-top: 8px;
@@ -400,26 +283,6 @@ button {
     grid-column-gap: unset;
     justify-content: left;
 }
-
-.quantity-label {
-    font-size: 16px;
-}
-
-.btn-change-value {
-    margin: unset;
-    width: 21px;
-    height: 20px;
-    padding: 0px 7px 2px 5px;
-}
-
-#btn-decrease {
-    border-radius: 4px 0px 0px 4px;
-}
-
-#btn-increase {
-    border-radius: 0px 4px 4px 0px;
-}
-
 input {
     margin: unset;
     padding: unset;
@@ -436,6 +299,9 @@ input {
     border-style: solid none solid none;
     border-color: rgb(236, 236, 236);
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+input:hover{
+    background-color:#46ce18
 }
 
 .buy-btn {
@@ -469,10 +335,15 @@ input {
     max-width: 100%;
     border-style: none;
     width: 50px;
-    height: 13px;
-    
+    height: 13px;    
 }
 
+.title-detail {
+    color: black;
+    font-size: 30px;
+    font-family: Tahoma;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 720px) {
     .buy-btn {
@@ -513,117 +384,102 @@ input {
 }
 
 
-﻿ /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-.header {
-    transition: all 0.5s;
-    z-index: 997;
-    padding: 20px 0;
+/*start header*/
+*{
+    box-sizing:border-box;
 }
-
-.header.header-scrolled {
-    background: #fff;
-    padding: 15px 0;
-    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+body{
+    margin:0;
 }
-
-    .header .logo span {
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #012970;
-        font-family: "Nunito", sans-serif;
-        margin-top: 3px;
-    }
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
-.navbar {
-    padding: 0;
+ .container-top{
+    margin: 0 auto;
+    max-width: auto;
 }
-
-    .navbar ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        align-items: center;
-    }
-
-    .navbar li {
-        position: relative;
-    }
-
-    .navbar a, .navbar a:focus {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0 10px 30px;
-        font-family: "Nunito", sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        color: #013289;
-        white-space: nowrap;
-        transition: 0.3s;
-    }
-
-        .navbar a i, .navbar a:focus i {
-            font-size: 12px;
-            line-height: 0;
-            margin-left: 5px;
-        }
-
-        .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-            color: #4154f1;
-        }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
-}
-
-body {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-   
-}
-
-footer {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 50px 100px;
-    background: #4154f1;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-    footer .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-@media only screen and (max-width: 980px)  {
+header{
+    margin-bottom:10px;
 
 }
 
-@media only screen and (max-width: 720px)  {
+.header-top {
+    background: #00ffff;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 16px; 
 }
+.header-top img{
+    width: 150px;
+    height: 150px;
+}
+.header-main{ 
+    background:#08175c;
+    padding:0 5px 0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.Menu{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.Menu li{
+    display:inline-block;
+}
+.Menu li a{
+    text-decoration:none;
+    color:aliceblue;
+    display:inline-block;
+    padding: 0 20px;
+    font-family:Tahoma;
+    font-size:20px;
+}   
+.Menu li a:hover{
+   color:red;
+}
+.banner{
+    max-width: 100%;
+    height:300px
+}
+/*End header*/
+
+/*start footer*/
+.container-bot{
+    background:#e6eed6;
+    font-size:14px;
+}
+/*End footer*/
+
+/*region reponsive*/
 
 @media only screen and (max-width: 680px)  {
+    .Menu li a {
+        text-decoration: none;
+        color: aliceblue;
+        display: inline-block;
+        padding: 0 20px;
+        font-family: Tahoma;
+        font-size: 16px;
+    } 
+
 }
 @media only screen and (max-width: 540px)  {
+
+    .Menu li a {
+        text-decoration: none;
+        color: aliceblue;
+        display: inline-block;
+        padding: 0 20px;
+        font-family: Tahoma;
+        font-size: 14px;
+    } 
 }
 @media only screen and (max-width: 360px)  {
+    .Menu li a {
+        text-decoration: none;
+        color: aliceblue;
+        display: inline-block;
+        padding: 0 20px;
+        font-family: Tahoma;
+        font-size: 14px;
+    } 
 }

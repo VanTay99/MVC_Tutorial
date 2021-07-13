@@ -9,24 +9,25 @@
     <link href="~/Content/desktop/css/phonestore.css" rel="stylesheet" />
 </head>
 <body>
-    @* Start Header*@
-    <header id="header" class="header fixed-top">
-        <div class=" container-fluid">
-            <a href="#" class="logo">
-                <span>PhoneShop</span>
-            </a>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-
-                    <li><a class="nav-link scrollto " href="#">Home</a></li>
-                    <li><a class="nav-link scrollto " href="#">About</a></li>
-                    <li><a class="nav-link scrollto " href="#">Contact</a></li>
-                    <li><a class="nav-link scrollto " href="#">Product</a></li>
+    <div class="container-top">
+        <header>
+            <div class=" header-top">
+                <a href="">
+                    <img src="~/Content/desktop/images/logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="header-main">
+                <ul class="Menu">
+                    <li> <a href="">Home</a></li>
+                    <li> <a href="">Contact</a></li>
+                    <li> <a href="">About</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </header>
+    </div>
+    <section class="banner">
+        <img src="~/Content/desktop/images/banner-top-6-didongviet.jpg" alt="Banner" />
+    </section>
     <div class="container body-content">
         @RenderBody()
     </div>
