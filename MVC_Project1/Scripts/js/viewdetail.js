@@ -1,17 +1,15 @@
-﻿let result = document.getElementById('result');
-var val
-function handleChange() {
-    result = document.getElementById('result');
-}
+﻿
 function giam() {
-    if (result.value > 1) {
-        val = Number(result.value) - 1;
-    }
-    else val = 1;
-    result.setAttribute('value',val)
+    var result = document.getElementById('quantity');
+    var qty = result.value;
+    if (!isNaN(qty) &  qty > 1 )
+    result.value--;
+    return false;
 }
 function tang() {
-    val = Number(result.value) + 1;
-    result.setAttribute('value', val);
+    var result = document.getElementById('quantity');
+    var qty = result.value;
+    if (!isNaN(qty)) result.value++;
+    return false;
     
 }
