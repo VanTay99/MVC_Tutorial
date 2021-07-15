@@ -24,6 +24,11 @@ namespace MVC_Project1
                defaults: new { controller = "HomeShop", action = "ViewProduct" }
                );
             routes.MapRoute(
+               name: "DemoAjax",
+               url: "HomeShop/DemoAjax",
+               defaults: new { controller = "HomeShop", action = "Index" }
+               );
+            routes.MapRoute(
                  name: "Default",
                  url: "{controller}/{action}/{id}",
                  defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }

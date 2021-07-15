@@ -244,6 +244,8 @@
     <Content Include="Content\desktop\images\xiaominote10pro.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Styles.css" />
+    <Content Include="Content\txt\TextFile1.txt" />
+    <Content Include="Content\txt\XMLFile1.xml" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
@@ -266,6 +268,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\demoAjax.js" />
     <Content Include="Scripts\js\viewdetail.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />

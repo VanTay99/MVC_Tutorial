@@ -9,10 +9,14 @@ namespace MVC_Project1.Controllers
     public class HomeShopController : Controller
     {
         // GET: HomeShop
+       
         public ActionResult Index()
         {
             return View();
         }
+        
+       
+
         public ActionResult ViewProduct()
         {
             var products = GetListProducts();
