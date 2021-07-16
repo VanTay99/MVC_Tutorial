@@ -14,7 +14,9 @@ namespace MVC_Project1
             routes.MapRoute(
                name: "ViewDetail",
                url: "san-pham-{lname}-{Id}",
-               defaults: new { controller = "Detail", action = "ViewDeTail" }
+               defaults: new { controller = "Detail", action = "ViewDeTail" },
+               // lname chi cho nhap ki tu va so. Id chi cho duy nhat kieu nhap vao la so.
+                new { lname = @"^(\w|-\d)+$", Id = @"(\d)+$" }
                );
             routes.MapRoute(
                name: "ViewProduct",
@@ -22,14 +24,15 @@ namespace MVC_Project1
                defaults: new { controller = "HomeShop", action = "ViewProduct" }
                );
             routes.MapRoute(
+               name: "DemoAjax",
+               url: "HomeShop/DemoAjax",
+               defaults: new { controller = "HomeShop", action = "Index" }
+               );
+            routes.MapRoute(
                  name: "Default",
                  url: "{controller}/{action}/{id}",
                  defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }
                  );
-            
-            
-
-
         }
     }
 }

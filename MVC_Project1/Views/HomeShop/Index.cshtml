@@ -1,7 +1,9 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
+<p id="demo">
+    Let Ajax change this text
+</p>
+<button id="btn-ajax" style="width:100px;border:medium #0094ff; background-color:red;" onclick="loadDoc()">Click to load Txt</button>
+<button style="width:100px;border:medium #0094ff; background-color:red;" onclick="loadXML()">Click to load XML</button>
+@section scripts{
+    <script src="~/Scripts/js/demoAjax.js"></script>
 }
-
-<h2>Index</h2>
-
