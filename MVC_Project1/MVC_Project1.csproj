@@ -201,13 +201,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\desktop\css\header-footer.css" />
-    <Content Include="Content\desktop\css\phonestore.css" />
-    <Content Include="Content\desktop\css\phonestore.min.css">
-      <DependentUpon>phonestore.css</DependentUpon>
-    </Content>
-    <Content Include="Content\desktop\css\style.css" />
-    <Content Include="Content\desktop\css\style.min.css">
-      <DependentUpon>style.css</DependentUpon>
+    <Content Include="Content\desktop\css\PhoneShop.css" />
+    <Content Include="Content\desktop\css\PhoneShop.min.css">
+      <DependentUpon>PhoneShop.css</DependentUpon>
     </Content>
     <Content Include="Content\desktop\css\ViewDetail.css" />
     <Content Include="Content\desktop\css\ViewProduct.css" />
@@ -243,7 +239,6 @@
     <Content Include="Content\desktop\images\xiaominote10.jpg" />
     <Content Include="Content\desktop\images\xiaominote10pro.jpg" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Styles.css" />
     <Content Include="Content\txt\TextFile1.txt" />
     <Content Include="Content\txt\XMLFile1.xml" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
@@ -289,8 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\mobile\css\" />
-    <Folder Include="Content\mobile\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
