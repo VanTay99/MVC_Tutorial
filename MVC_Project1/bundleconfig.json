@@ -1,25 +1,5 @@
 [
   {
-    "outputFileName": "Content/CSS/Layout/layout.min.css",
-    "inputFiles": [
-      "Content/CSS/Layout/layout.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/CSS/Product/bundle1.css",
-    "inputFiles": [
-      "Content/CSS/Product/productdetail.css",
-      "Content/CSS/Product/product.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/CSS/bundle.css",
-    "inputFiles": [
-      "Content/CSS/ViewProduct.css",
-      "Content/CSS/ViewDetail.css"
-    ]
-  },
-  {
     "outputFileName": "Content/desktop/css/PhoneShop.css",
     "inputFiles": [
       "Content/desktop/css/header-footer.css",
