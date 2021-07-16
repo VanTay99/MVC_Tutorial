@@ -38,7 +38,7 @@ namespace MVC_Project1.Controllers
                 {
                     Id="1",
                     brand="Apple",
-                    name="Iphone 12 Pro Max",
+                    name="Iphone 12 Pro Max ",
                     url="/Content/desktop/images/iphone12_1.jpg",
                     Price=28950,
                     Description="Máy mới chính hãng Apple Việt Nam",

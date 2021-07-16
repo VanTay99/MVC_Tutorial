@@ -4,12 +4,12 @@
 
 }
 @section css{
- 
-    <link href="~/Content/desktop/css/phonestore.css?v=@(DateTime.Now.ToString("hhmmss"))" rel="stylesheet" />
+    <link href="~/Content/desktop/css/PhoneShop.min.css" ?v=@(DateTime.Now.ToString("hhmmss")) rel="stylesheet" />
+
 }
-
-
-<p class="title-product">Danh Sách Sản Phẩm</p>
+<div class="title-product">
+    <p>Danh Sách Sản Phẩm</p>
+</div>
 <div class="grid-container">
     @foreach (var product in Model)
     {
@@ -18,15 +18,15 @@
                @{ var route = "san-pham-" + product.lname + "-" + product.Id;}
                href="@route">
                 @{ var thumbnail = product.url;}
-                <img class="img-product"src="@thumbnail" />
-                
-                    <div class="product-name">
-                        @product.name
-                    </div>
-                    <div class="product-price">
-                        @string.Format("{0:0.000}", product.Price) đ
-                    </div>
-                
+                <img class="img-product" src="@thumbnail" />
+
+                <div class="product-name">
+                    @product.name
+                </div>
+                <div class="product-price">
+                    @string.Format("{0:0.000}", product.Price) đ
+                </div>
+
 
             </a>
         </div>
