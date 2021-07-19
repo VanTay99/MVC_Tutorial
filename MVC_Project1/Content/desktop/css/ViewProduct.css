@@ -80,7 +80,7 @@
     font-size:24px;
     font-weight:bold;
     line-height:29px;
-    width:32%;
+    
 
 }
 
@@ -91,31 +91,98 @@
         grid-template-columns:auto auto auto auto;
     }
 }
-
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 800px) {
     .grid-container {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto ;
+
     }
-    .grid-item {
-        overflow: auto;
+   
+    .product-name{
+        font-size:14px;
+    }
+    .product-price{
+        font-size:16px;
     }
 
 }
-
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 640px) {
     .grid-container {
-        grid-template-columns: auto auto auto ;
+        grid-template-columns: auto auto auto;
     }
-    .grid-item {
-        overflow: auto;
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: auto auto  ;
+    }
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+    .title-product p {
+        font-size: 16px;
+    }
+   
+}
+@media only screen and (max-width: 512px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .title-product p {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .grid-container {
+        grid-template-columns: auto ;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .title-product p {
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 360px) {
     .grid-container {
-        grid-template-columns: auto auto ;
+        grid-template-columns: auto;
     }
-    .grid-item {
-        overflow: auto;
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .title-product p {
+        font-size: 16px;
     }
 }
 /*#endregion */
