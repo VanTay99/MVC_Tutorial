@@ -38,6 +38,7 @@
    padding:10px 10px;
 }
 
+<<<<<<< HEAD
 .info a {
     text-decoration: none;
     color: #093789;
@@ -59,11 +60,15 @@
     background:#00ffff
 }
 @media only screen and (max-width: 576px) {
+=======
+
+@media only screen and (max-width: 540px)  {
+>>>>>>> 47b95529cc9c4cfa66200cc5b82b4244614ccab3
     .header-top{
-        max-width:576px;
+        max-width:540px;
     }
     .header-main{
-        max-width:576px;
+        max-width:540px;
     }
     .Menu {
         list-style-type: none;
@@ -83,15 +88,7 @@
                 color: #ff6a00;
             }
 }
-@media only screen and (max-width: 512px) {
-    .header-top {
-        max-width: 512px;
-    }
-
-    .header-main {
-        max-width: 512px;
-    }
-
+@media only screen and (max-width: 360px)  {
     .Menu {
         list-style-type: none;
         margin: 0;
@@ -112,52 +109,6 @@
                 color: #ff6a00;
             }
 }
-@media only screen and (max-width: 414px) {
-    
-
-    .Menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 100px;
-        background-color: #f1f1f1;
-    }
-
-        .Menu li a {
-            display: block;
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-
-            .Menu li a:hover {
-                background-color: #555;
-                color: #ff6a00;
-            }
-}
-@media only screen and (max-width: 360px) {
-    
-    .Menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 100px;
-        background-color: #f1f1f1;
-    }
-
-        .Menu li a {
-            display: block;
-            color: #000;
-            padding: 8px 16px;
-            text-decoration: none;
-        }
-
-            .Menu li a:hover {
-                background-color: #555;
-                color: #ff6a00;
-            }
-}
-
 body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -298,7 +249,7 @@ input {
     }
 
 .endow{
-    
+    background:white;
     padding-bottom:5px;
     padding-top: 5px;
 }
@@ -316,40 +267,8 @@ input {
 
 
 /*#region Reponsive */
-@media only screen and (max-width: 800px) {
-   .grid-container-detail{
-       margin-right:0;
-   }
-    .endow {
-        
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
-    .buy-btn{
-        width:250px;
-    }
-}
-@media only screen and (max-width: 640px) {
-    .grid-container-detail {
-        display: block;
-    }
 
-    .grid-item1 {
-        border-right: none;
-        border-bottom: outset #25c0d5
-    }
-
-    .buy-btn {
-        width: 200px;
-    }
-
-    .grid-item1 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}   
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 540px) {
    .grid-container-detail{
        display:block;
    }
@@ -362,56 +281,12 @@ input {
         width:200px;
     }
     .grid-item1 img {
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
         object-fit: cover;
     }
 }
-@media only screen and (max-width: 512px) {
-    .grid-container-detail {
-        display: block;
-    }
 
-    .grid-item1 {
-        border-right: none;
-        border-bottom: outset #25c0d5
-    }
-
-    .buy-btn {
-        width: 200px;
-    }
-
-    .grid-item1 img {
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-    }
-}
-@media only screen and (max-width: 414px) {
-    .grid-container-detail {
-        display: block;
-        grid-template-columns:auto auto;
-        background:white;
-      
-    }
-
-    .grid-item1 {
-        grid-column:auto;
-        border-right: none;
-        border-bottom: outset #25c0d5;
-
-    }
-
-    .buy-btn {
-        width: 200px;
-    }
-
-    .grid-item1 img {
-        width: 70%;
-        height: 70%;
-        object-fit: cover;
-    }
-}
 @media only screen and (max-width: 360px) {
     .grid-container-detail {
         display: block;
@@ -423,15 +298,16 @@ input {
         border-bottom: outset #25c0d5
     }
         .grid-item1 img {
-            width: 70%;
-            height: 70%;
+            width: 55%;
+            height: 55%;
             object-fit: cover;
         }
     .grid-item2 {
-        margin: 0;
-        padding:0;
-        justify-self:auto;
-        grid-column: 1 / 4;
+        margin: 16px 0px 8px 0px;
+        justify-self: start;
+        padding-left: 10px;
+        padding-right: 50px;
+        grid-column: 2 / 8;
     }
     .buy-btn {
         width: 200px;
@@ -521,7 +397,7 @@ input {
     font-size:24px;
     font-weight:bold;
     line-height:29px;
-    
+    width:32%;
 
 }
 
@@ -532,87 +408,30 @@ input {
         grid-template-columns:auto auto auto auto;
     }
 }
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 780px) {
+    .grid-container {
+        grid-template-columns: auto auto auto auto;
+    }
+    .grid-item {
+        overflow: auto;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
     .grid-container {
         grid-template-columns: auto auto auto ;
-
     }
-   
-    .product-name{
-        font-size:14px;
-    }
-    .product-price{
-        font-size:16px;
-    }
-
-}
-@media only screen and (max-width: 640px) {
-    .grid-container {
-        grid-template-columns: auto auto auto;
-    }
-
-    .product-name {
-        font-size: 16px;
-    }
-
-    .product-price {
-        font-size: 13px;
-    }
-}
-@media only screen and (max-width: 576px) {
-    .grid-container {
-        grid-template-columns: auto auto  ;
-    }
-    .product-name {
-        font-size: 16px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-    .title-product p {
-        font-size: 16px;
-    }
-   
-}
-@media only screen and (max-width: 512px) {
-    .grid-container {
-        grid-template-columns: auto auto;
-    }
-
-    .product-name {
-        font-size: 14px;
-    }
-
-    .product-price {
-        font-size: 14px;
-    }
-
-    .title-product p {
-        font-size: 16px;
-    }
-}
-@media only screen and (max-width: 414px) {
-    .grid-container {
-        grid-template-columns: auto ;
-    }
-
-    .product-name {
-        font-size: 20px;
-    }
-
-    .product-price {
-        font-size: 20px;
-    }
-
-    .title-product p {
-        font-size: 16px;
+    .grid-item {
+        overflow: auto;
     }
 }
 @media only screen and (max-width: 360px) {
     .grid-container {
-        grid-template-columns: auto;
+        grid-template-columns: auto auto ;
     }
+<<<<<<< HEAD
 
     .product-name {
         font-size: 14px;
@@ -624,6 +443,11 @@ input {
 
     .title-product p {
         font-size: 16px;
+=======
+    .grid-item {
+        overflow: auto;
+>>>>>>> 47b95529cc9c4cfa66200cc5b82b4244614ccab3
     }
 }
 /*#endregion */
+
