@@ -1,9 +1,44 @@
 ﻿
-<p id="demo">
-    Let Ajax change this text
-</p>
-<button id="btn-ajax" style="width:100px;border:medium #0094ff; background-color:red;" onclick="loadDoc()">Click to load Txt</button>
-<button style="width:100px;border:medium #0094ff; background-color:red;" onclick="loadXML()">Click to load XML</button>
-@section scripts{
-    <script src="~/Scripts/js/demoAjax.js"></script>
+@{
+    ViewBag.Title = "Index";
 }
+@section css{
+    <link href="~/Content/desktop/css/PhoneShop.min.css" rel="stylesheet"/>
+    }
+
+<head>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+</head>
+<div>
+    <p id="demo">
+        <h1></h1>
+    </p>
+
+    <h1>Demo Ajax file TXT and XML</h1>
+    <button id="btn-ajax" onclick="loadDoc()">Change content Text</button>
+    <button onclick="loadXML()">Change content XML</button>
+    <hr />
+    <h1>Demo Ajax file ASP  </h1>
+
+    <h3>Start typing a name in the input field below:</h3>
+
+    <form action="">
+        First name: <input style="width:100px" type="text" id="txt1" onkeyup="loadASP(this.value)">
+    </form>
+
+    <p>Suggestions: <span id="txtHint"></span></p>
+    <hr />
+
+    <h1> Demo JQuery Ajax</h1>
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+    <button id="button1">Get External Content</button>
+
+    <button id="button2">Send an HTTP GET request to a page and get the result back</button>
+    
+</div>
+@section scripts{
+    <script src="~/Scripts/js/demoAjax.js"> </script>
+  
+    }
+

@@ -4,7 +4,7 @@
 
 }
 @section css{
-    <link href="~/Content/desktop/css/PhoneShop.min.css" ?v=@(DateTime.Now.ToString("hhmmss")) rel="stylesheet" />
+    <link href="~/Content/desktop/css/PhoneShop.css" ?v=@(DateTime.Now.ToString("hhmmss")) rel="stylesheet" />
 
 }
 <div class="title-product">
@@ -23,9 +23,9 @@
                 <div class="product-name">
                     @product.name
                 </div>
-                <div class="product-price">
+                <strong class="product-price">
                     @string.Format("{0:0.000}", product.Price) đ
-                </div>
+                </strong>
 
 
             </a>

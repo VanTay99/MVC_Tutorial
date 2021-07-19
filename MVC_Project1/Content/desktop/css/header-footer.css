@@ -5,10 +5,10 @@
 }
 .header-main{
     background: #ff6a00;
-    padding: 0 5px 0 30px;
+    padding: 20px 10px 20px 30px;
     display:flex;
-    
     align-items:center;
+    justify-content:space-between;
 }
 .Menu{
     margin:0;
@@ -41,9 +41,24 @@
 .info a {
     text-decoration: none;
     color: #093789;
-}
+    
 
-@media only screen and (max-width: 576px)  {
+}
+.info ul{
+    list-style:none;
+}
+.form-search {
+    display: inline-block;
+}
+.form-search-input {
+    width: 300px;
+    
+}
+.btn-search{
+    height:30px;
+    background:#00ffff
+}
+@media only screen and (max-width: 576px) {
     .header-top{
         max-width:576px;
     }

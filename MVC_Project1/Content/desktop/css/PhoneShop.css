@@ -5,10 +5,10 @@
 }
 .header-main{
     background: #ff6a00;
-    padding: 0 5px 0 30px;
+    padding: 20px 10px 20px 30px;
     display:flex;
-    
     align-items:center;
+    justify-content:space-between;
 }
 .Menu{
     margin:0;
@@ -41,9 +41,24 @@
 .info a {
     text-decoration: none;
     color: #093789;
-}
+    
 
-@media only screen and (max-width: 576px)  {
+}
+.info ul{
+    list-style:none;
+}
+.form-search {
+    display: inline-block;
+}
+.form-search-input {
+    width: 300px;
+    
+}
+.btn-search{
+    height:30px;
+    background:#00ffff
+}
+@media only screen and (max-width: 576px) {
     .header-top{
         max-width:576px;
     }
@@ -475,21 +490,20 @@ input {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.product-name {
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0px 8px 0px 5px;
-    word-break: break-word;
-    color: #333;
+ .product-name {
+   
     text-decoration: none;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:5px;
+    color:black;
+ 
+
 }
 
 .product-price {
@@ -498,7 +512,7 @@ input {
     margin: 5px 8px 0px 5px;
     margin-bottom: 5px;
     color: #d0021b;
-    font-weight: bold;
+    
     display:block;
 }
 
@@ -601,11 +615,11 @@ input {
     }
 
     .product-name {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .product-price {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .title-product p {
