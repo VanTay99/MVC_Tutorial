@@ -48,6 +48,12 @@
     <Reference Include="DnsClient, Version=1.4.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.4.0\lib\net471\DnsClient.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MongoDB.Bson, Version=2.12.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.12.4\lib\net452\MongoDB.Bson.dll</HintPath>
@@ -97,6 +103,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
@@ -209,9 +217,11 @@
     <Content Include="Content\desktop\css\ViewDetail.css" />
     <Content Include="Content\desktop\css\ViewProduct.css" />
     <Content Include="Content\desktop\images\banner-top-6-didongviet.jpg" />
+    <Content Include="Content\desktop\images\cart_icon.png" />
     <Content Include="Content\desktop\images\freeship.png" />
     <Content Include="Content\desktop\images\galaxynote20.jpg" />
     <Content Include="Content\desktop\images\galaxys20.jpg" />
+    <Content Include="Content\desktop\images\hamburger_menu_icon.png" />
     <Content Include="Content\desktop\images\iphone-11-%2838%29.jpg" />
     <Content Include="Content\desktop\images\iphone-12-pro-max.jpg" />
     <Content Include="Content\desktop\images\iphone-12.jpg" />
@@ -221,6 +231,7 @@
     <Content Include="Content\desktop\images\iphone12%283%29.jpg" />
     <Content Include="Content\desktop\images\iphone12Promax.jpg" />
     <Content Include="Content\desktop\images\iphone12_1.jpg" />
+    <Content Include="Content\desktop\images\loading.gif" />
     <Content Include="Content\desktop\images\Logo.jpg" />
     <Content Include="Content\desktop\images\logo.png" />
     <Content Include="Content\desktop\images\oppo-reno-5_3_.jpg" />
@@ -231,7 +242,10 @@
     <Content Include="Content\desktop\images\samsung-galaxy-s20-fan-edition-%282%29.jpg" />
     <Content Include="Content\desktop\images\samsunggalaxynote20.jpg" />
     <Content Include="Content\desktop\images\samsungs20.jpg" />
+    <Content Include="Content\desktop\images\search_icon.png" />
     <Content Include="Content\desktop\images\tikicard.png" />
+    <Content Include="Content\desktop\images\tiki_logo_icon.png" />
+    <Content Include="Content\desktop\images\user_icon.png" />
     <Content Include="Content\desktop\images\vivo-v21-5g-2.jpg" />
     <Content Include="Content\desktop\images\vivo-v21-600x600.jpg" />
     <Content Include="Content\desktop\images\vivo-x60-pro-8.jpg" />
@@ -262,6 +276,8 @@
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -284,6 +300,7 @@
     <Content Include="Views\Detail\ViewDetail.cshtml" />
     <Content Include="Views\HomeShop\DemoPartialviewfooter.cshtml" />
     <Content Include="Views\HomeShop\Index.cshtml" />
+    <Content Include="Views\HomeShop\ListProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

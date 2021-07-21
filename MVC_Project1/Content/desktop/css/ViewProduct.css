@@ -18,7 +18,7 @@
     padding: 2px;
     justify-self: stretch;
     font-size: 0.6rem;
-    border: #00ffff 2px solid;
+    border-left:outset;
    
    
 }
@@ -82,10 +82,33 @@
     
 
 }
-
+.container .list-product{
+    background-color:white;
+    display:grid;
+    grid-template-rows:auto auto;
+    justify-items:center;
+}
+.view-more {
+    margin-top:16px;
+    margin-bottom: 16px;
+    align-self: center;
+    border: 2px solid rgb(13,92,182);
+    border-radius: 4px;
+    color: rgb(13,92,182);
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 273px;
+    font-size: 13px;
+    text-align: center;  
+}
+.view-more:hover{
+    background:rgb(13,92,182);
+    color:azure;
+}
 
 /*#region Reponsive */
-@media only screen and (max-width: 980px)  {
+@media only screen and (max-width: 980px) {
     .grid-container{
         grid-template-columns:auto auto auto auto;
     }

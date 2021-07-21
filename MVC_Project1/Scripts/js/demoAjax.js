@@ -1,5 +1,6 @@
-﻿
-// demo Ajax voi file text
+﻿'use strict'
+// demo ajax voi file text
+
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -46,7 +47,7 @@ function loadASP(str) {
 //Ajax khong dong bo
 $(document).ready(function () {
     $("#button1").click(function () {
-        $.ajaxSetup({
+        $.ajax({
             url: "/Content/txt/ajax_info.txt", success: function (result) {
                 $("#div1").html(result);
             }
@@ -57,7 +58,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#button2").click(function () {
-        $.get("/Content/asp/gethint.asp",function (data, status) {
+        $.get("/Content/xml/ajax_info.xml",function (data, status) {
             alert("Data: " + data + "\nStatus: " + status);
         });
     });
@@ -65,3 +66,22 @@ $(document).ready(function () {
 
 
 //#endregion 
+
+
+var PageIndex = 1;
+$("#btnViewMore").click(function () {
+    $.ajax({
+        type: 'POST', 
+        url: '/HomeShop/fetchData/',
+        data: { PageIndex: PageIndex++ },
+        cache: false,
+        success: function (result) {
+            if (result.html != null && result.remain >= 0) {
+                $('.grid-container').append(result.html);
+                if (result.remain == 0) {
+                    $('#btnViewMore').remove();
+                }
+            }
+        }
+    });
+})
