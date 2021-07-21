@@ -8,17 +8,17 @@ namespace MVC_Project1.Controllers
 {
     public class DetailController : HomeShopController
     {
-        public ActionResult ViewDetail ( string lname , string Id)
+        public ActionResult ViewDetail(string lname, string Id)
         {
             if (string.IsNullOrEmpty(Id)) return null;
 
             var lst = GetListProducts();
             if (lst == null || lst.Count == 0) return null;
 
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id)&&p.lname.Equals(lname));
+            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id) && p.lname.Equals(lname));
             if (obj == null) return null;
             return View(obj);
         }
-       
+
     }
 }

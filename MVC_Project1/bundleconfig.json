@@ -1,48 +1,11 @@
 [
   {
-    "outputFileName": "Content/CSS/Layout/layout.min.css",
-    "inputFiles": [
-      "Content/CSS/Layout/layout.css"
-    ],
-    "sourceMap": false,
-    "sourceMapRootPath": null
-  },
-  {
-    "outputFileName": "Content/CSS/Product/bundle1.css",
-    "inputFiles": [
-      "Content/CSS/Product/productdetail.css",
-      "Content/CSS/Product/product.css"
-    ],
-    "sourceMap": false,
-    "sourceMapRootPath": null
-  },
-  {
-    "outputFileName": "Content/CSS/bundle.css",
-    "inputFiles": [
-      "Content/CSS/ViewProduct.css",
-      "Content/CSS/ViewDetail.css"
-    ],
-    "sourceMap": false,
-    "sourceMapRootPath": null
-  },
-  {
-    "outputFileName": "Content/desktop/css/style.css",
-    "inputFiles": [
-      "Content/desktop/css/ViewProduct.css",
-      "Content/desktop/css/ViewDetail.css",
-      "Content/desktop/css/header-footer.css"
-    ],
-    "sourceMap": false,
-    "sourceMapRootPath": null
-  },
-  {
-    "outputFileName": "Content/desktop/css/phonestore.css",
+    "outputFileName": "Content/desktop/css/PhoneShop.css",
     "inputFiles": [
       "Content/desktop/css/header-footer.css",
       "Content/desktop/css/ViewDetail.css",
       "Content/desktop/css/ViewProduct.css"
-    ],
-    "sourceMap": false,
-    "sourceMapRootPath": null
+    ]
   }
+  
 ]

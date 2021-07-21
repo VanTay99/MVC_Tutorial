@@ -4,33 +4,39 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title- PhoneShop</title>
+    <title>@ViewBag.Title- Nguyễn Văn Tây - PhoneShop</title>
+   
     @RenderSection("css", required: false)
-    <link href="~/Content/desktop/css/phonestore.css" rel="stylesheet" />
+  
 </head>
 <body>
-    @* Start Header*@
-    <header id="header" class="header fixed-top">
-        <div class=" container-fluid">
-            <a href="#" class="logo">
-                <span>PhoneShop</span>
-            </a>
+    <div class="container-top">
+        <header>
+            <div class="header-top">
+                <a href="">
+                    <img src="~/Content/desktop/images/logo.png" alt="Logo" />
+                </a>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-
-                    <li><a class="nav-link scrollto " href="#">Home</a></li>
-                    <li><a class="nav-link scrollto " href="#">About</a></li>
-                    <li><a class="nav-link scrollto " href="#">Contact</a></li>
-                    <li><a class="nav-link scrollto " href="#">Product</a></li>
+            </div>
+            <div class="header-main">
+                <ul class="Menu">
+                    <li> <a href="">Home</a></li>
+                    <li> <a href="">Contact</a></li>
+                    <li> <a href="">About</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+                <form action="" class="form-search">
+                    <input type="text" class="form-search-input" placeholder="Nhập tên sản phẩm" />
+                    <button type="button" class="btn-search">Search</button>
+
+                </form>
+            </div>
+        </header>
+    </div>
+    
     <div class="container body-content">
         @RenderBody()
     </div>
-    @Html.Partial("~/Views/HomeShop/DemoPartialviewfooter.cshtml");
+    @Html.Partial("~/Views/HomeShop/DemoPartialviewfooter.cshtml")
     @RenderSection("scripts", required: false)
 </body>
 </html>

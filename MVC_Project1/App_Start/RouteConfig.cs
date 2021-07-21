@@ -15,13 +15,18 @@ namespace MVC_Project1
                name: "ViewDetail",
                url: "san-pham-{lname}-{Id}",
                defaults: new { controller = "Detail", action = "ViewDeTail" },
-               // lname chi cho nhap ki tu va so. Id chi cho duy nhat kieu nhap vao la so.
+                // lname chi cho nhap ki tu va so. Id chi cho duy nhat kieu nhap vao la so.
                 new { lname = @"^(\w|-\d)+$", Id = @"(\d)+$" }
                );
             routes.MapRoute(
                name: "ViewProduct",
                url: "product/viewproduct",
                defaults: new { controller = "HomeShop", action = "ViewProduct" }
+               );
+            routes.MapRoute(
+               name: "DemoAjax",
+               url: "HomeShop/DemoAjax",
+               defaults: new { controller = "HomeShop", action = "Index" }
                );
             routes.MapRoute(
                  name: "Default",
