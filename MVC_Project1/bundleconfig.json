@@ -1,11 +1,34 @@
 [
   {
-    "outputFileName": "Content/desktop/css/PhoneShop.css",
+    "outputFileName": "Content/_bundle-viewproduct.css",
     "inputFiles": [
-      "Content/desktop/css/header-footer.css",
-      "Content/desktop/css/ViewDetail.css",
-      "Content/desktop/css/ViewProduct.css"
+      "Content/Site.css",
+      "Content/font.css",
+      "Content/bootstrap.css",
+      "Content/css/ViewProduct.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/_bundle-viewdetail.css",
+    "inputFiles": [
+      "Content/Site.css",
+      "Content/font.css",
+      "Content/bootstrap.css",
+      "Content/css/ViewDetail.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/js/Index.js",
+    "inputFiles": [
+      "Scripts/js/demoAjax.js",
+      "Scripts/js/search.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/js/detail.js",
+    "inputFiles": [
+      "Scripts/js/viewdetail.js",
+      "Scripts/js/search.js"
     ]
   }
-  
 ]

@@ -1,44 +1,23 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title- Nguyễn Văn Tây - PhoneShop</title>
-   
+    <title>@ViewBag.Title</title>
     @RenderSection("css", required: false)
-  
 </head>
 <body>
-    <div class="container-top">
-        <header>
-            <div class="header-top">
-                <a href="">
-                    <img src="~/Content/desktop/images/logo.png" alt="Logo" />
-                </a>
+    @Html.Partial("~/Views/Shared/Header.cshtml")
 
-            </div>
-            <div class="header-main">
-                <ul class="Menu">
-                    <li> <a href="">Home</a></li>
-                    <li> <a href="">Contact</a></li>
-                    <li> <a href="">About</a></li>
-                </ul>
-                <form action="" class="form-search">
-                    <input type="text" class="form-search-input" placeholder="Nhập tên sản phẩm" />
-                    <button type="button" class="btn-search">Search</button>
+    <div style="background-color: rgb(239, 239, 239);">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
 
-                </form>
-            </div>
-        </header>
-    </div>
-    
-    <div class="container body-content">
-        @RenderBody()
-    </div>
-    @Html.Partial("~/Views/HomeShop/DemoPartialviewfooter.cshtml")
+    @Html.Partial("~/Views/Shared/DemoPartialviewfooter.cshtml")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
-
 

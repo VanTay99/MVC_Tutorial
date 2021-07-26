@@ -6,19 +6,27 @@ using System.Web.Mvc;
 
 namespace MVC_Project1.Controllers
 {
+   
     public class DetailController : HomeShopController
     {
-        public ActionResult ViewDetail(string lname, string Id)
+        #region router page detail-product
+        public ActionResult ViewDetail(string Url, string Id)
         {
             if (string.IsNullOrEmpty(Id)) return null;
+            
+            var getAll = Bussiness.ServicePproduct.getProducts(11, 0);
+         
+            var lst = getAll.ListProducts;
+            if (lst == null || getAll.Total == 0) return null;
 
-            var lst = GetListProducts();
-            if (lst == null || lst.Count == 0) return null;
-
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id) && p.lname.Equals(lname));
+            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id) && p.Url.Equals(Url));
             if (obj == null) return null;
+
             return View(obj);
         }
+        #endregion
 
     }
+
+
 }

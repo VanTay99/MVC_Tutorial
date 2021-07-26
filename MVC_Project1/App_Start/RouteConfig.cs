@@ -6,33 +6,23 @@ using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace MVC_Project1
-{
-    public class RouteConfig
+{ 
+public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.MapRoute(
                name: "ViewDetail",
-               url: "san-pham-{lname}-{Id}",
-               defaults: new { controller = "Detail", action = "ViewDeTail" },
-                // lname chi cho nhap ki tu va so. Id chi cho duy nhat kieu nhap vao la so.
-                new { lname = @"^(\w|-\d)+$", Id = @"(\d)+$" }
+               url: "product/{url}-{id}",
+               defaults: new { controller = "Detail", action = "ViewDetail" }
+
                );
+
             routes.MapRoute(
-               name: "ViewProduct",
-               url: "product/viewproduct",
-               defaults: new { controller = "HomeShop", action = "ViewProduct" }
-               );
-            routes.MapRoute(
-               name: "DemoAjax",
-               url: "HomeShop/DemoAjax",
-               defaults: new { controller = "HomeShop", action = "Index" }
-               );
-            routes.MapRoute(
-                 name: "Default",
-                 url: "{controller}/{action}/{id}",
-                 defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }
-                 );
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "HomeShop", action = "ViewProduct", id = UrlParameter.Optional }
+                );
         }
     }
 }
