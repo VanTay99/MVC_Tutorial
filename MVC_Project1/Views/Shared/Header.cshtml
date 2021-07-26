@@ -1,0 +1,44 @@
+﻿
+<header>
+    <div class="container header-content">
+        <div class="header logo-and-category">
+            <a class="logo" href="/"><img src="~/Content/images/tiki_logo_icon.png" alt="Tiki logo" /></a>
+            <a class="category-dropdown" href="">
+                <img src="~/Content/images/hamburger_menu_icon.png" alt="Alternate Text" />
+                <div class="category-and-product-label">
+                    <div class="category-and-product">
+                        <div class="category-lable">Danh mục</div>
+                        <div class="product-lable">Sảm Phẩm</div>
+                    </div>
+                </div>
+              
+            </a>
+        </div>
+        @using (Html.BeginForm("ViewProduct", "HomeShop", FormMethod.Get))
+        {
+<div class="header search-form">
+
+    <input type="text" name="search" value="" id="input-search" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..." />
+    <button type="submit" class="btn search" id="btn-search">
+        <img src="~/Content/images/search_icon.png" alt="Alternate Text" />
+        <span class="search-lable">Tìm kiếm</span>
+    </button>
+
+
+</div>}
+        <div class="header user-shortcut">
+            <a href="" class="account-container">
+                <img src="~/Content/images/user_icon.png" alt="Alternate Text" />
+                <div>
+                    <div class="account-lable">Tài Khoản</div>
+                    <div class="account-name">User Name</div>
+                </div>
+            </a>
+
+            <a href="" class="cart-item">
+                <img src="~/Content/images/cart_icon.png" alt="Alternate Text" />
+                <div class="cart-lable">Giỏ Hàng</div>
+            </a>
+        </div>
+    </div>
+</header>

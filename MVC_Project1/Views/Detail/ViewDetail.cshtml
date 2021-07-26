@@ -1,57 +1,53 @@
-﻿@model MVC_Project1.Models.Product
-@{ ViewBag.Title = "Detail"; }
+﻿@model Bussiness.ProductService.ProductDTO
+@{
+    ViewBag.Title = "Detail";
+}
 
 @section css{
-    <link href="~/Content/desktop/css/PhoneShop.min.css" ?v=@(DateTime.Now.ToString("hhmmss")) rel="stylesheet" />
-
+    <link href="~/Content/_bundle-viewdetail.min.css" rel="stylesheet" />
 }
-<p class="title-detail">Chi tiết sản phẩm</p>
-<div class="grid-container-detail">
+@{
+    var img_url = "/Content/images/" + Model.Thumb;
+}
+<div class="grid-container">
     <div class="grid-item1">
-        <img src="@Model.url" alt="@Model.name" />
+        <img src="@img_url" alt="@Model.Name" />
     </div>
     <div class="grid-item2">
         <div class="header-info">
-            <div class="header-info-item" id="header-info-item1">
-                <div>
-                    <span class="brand">Hãng: @Model.brand</span>
-                </div>
-                <div class="product-name">
-                    <span id="name">@Model.name</span>
-                </div>
-                <div>
-                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
-                </div>
-                <div>
-                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Số sao đánh giá sao đánh giá @Model.valueRating</span>
-                </div>
+            <div>
+                <div class="product-brand">Thương hiệu: ....</div>
             </div>
+            <div class="product-name">
+                <div id="name">@Model.Name</div>
+            </div>
+            <div>
+                <div style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</div>
+            </div>
+
         </div>
         <div class="body-info">
             <div class="body-info-item" id="body-info-item1">
                 <div class="price-and-icon">
                     <div class="product-price">
-                        <span id="price">@string.Format("{0:0.000}", @Model.Price) đ </span>
+                        <span id="price">@string.Format("{0:0,0.000}", @Model.Price) <span style="text-decoration: underline">đ</span></span>
                     </div>
                     <div class="product-icon">
-
-                        <div class="description">
-                            @Model.Description
-                        </div>
-                    </div>
-                    <div class="endow">
                         <div class="icon-content">
-                            <a>
-                                <img src="~/Content/desktop/images/tikicard.png" /><p style="font-size:16px;"> Hoàn tiền 15% tối đa 600k/tháng</p>
-                            </a>
+                            Tiki card: Hoàn tiền 15% tối đa 600k/tháng
                         </div>
                         <div class="icon-content">
-                            <img src="~/Content/desktop/images/freeship.png" /> <p style="font-size:16px;">Không giới hạn, tự động áp dụng</p>
+                            FREESHIP: Không giới hạn, tự động áp dụng
                         </div>
                     </div>
                 </div>
-
-
+                <div class="product-option">
+                </div>
+                <hr />
+                <div class="note-for-customer">
+                    Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
+                </div>
+                <hr />
                 <div class="quantily-input">
                     <p class="quantity-label">Số lượng</p>
                     <div class="group-input">
@@ -68,5 +64,5 @@
     </div>
 </div>
 @section scripts{
-    <script src="~/Scripts/js/viewdetail.js"></script>
-}
+    <script src="~/Scripts/js/detail.min.js"></script>
+    }

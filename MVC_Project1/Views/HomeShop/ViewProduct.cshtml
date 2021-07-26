@@ -1,26 +1,35 @@
-﻿@model IEnumerable<MVC_Project1.Models.Product>
+﻿@model Bussiness.ProductService.ProductDTOResponse
+
 @{
-    ViewBag.Title = "ViewProduct";
-
+    ViewBag.Title = "Demo shop - Nguyen Van Tay";
 }
+
 @section css{
-    <link href="~/Content/desktop/css/PhoneShop.min.css" ?v=@(DateTime.Now.ToString("hhmmss")) rel="stylesheet" />
-    
+    <link href="~/Content/_bundle-viewproduct.min.css" rel="stylesheet" />
 }
-
 <head>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
 </head>
 <div class="container list-product">
-    <div class="title-product">
-        <p>Danh Sách Sản Phẩm</p>
-    </div>
-    <div class="grid-container">
-        @Html.Partial("~/Views/HomeShop/ListProduct.cshtml", Model)
-    </div>
-    <button class="btn view-more" id="btnViewMore">Xem thêm</button>
-</div> 
+
+    @if (Model != null)
+    {
+        <div class="search-result-lable hidden">Kết quả tìm kiếm cho "<span style="font-weight: bold" class="search-keyword"></span>"</div>
+        <div class="grid-container">
+            @Html.Partial("~/Views/HomeShop/ListProduct.cshtml", Model)
+        </div>
+    }
+    else
+    {
+        <div>Không tìm thấy yêu cầu của bạn</div>
+    }
+
+    @if (Model != null && Model.Remain > 0)
+    {
+<button class="btn view-more" id="btnViewMore">Xem thêm sản phẩm</button>
+    }
+</div>
+
 @section scripts{
-    <script src="~/Scripts/js/demoAjax.js"></script>
- 
+    <script src="~/Scripts/js/Index.min.js"></script>
 }
