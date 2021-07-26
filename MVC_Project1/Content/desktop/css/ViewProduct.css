@@ -18,7 +18,7 @@
     padding: 2px;
     justify-self: stretch;
     font-size: 0.6rem;
-    border: #00ffff 2px solid;
+    border-left:outset;
    
    
 }
@@ -48,21 +48,20 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.product-name {
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0px 8px 0px 5px;
-    word-break: break-word;
-    color: #333;
+ .product-name {
+   
     text-decoration: none;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:14px;
+    line-height:20px;
+    margin-bottom:5px;
+    color:black;
+ 
+
 }
 
 .product-price {
@@ -71,7 +70,7 @@
     margin: 5px 8px 0px 5px;
     margin-bottom: 5px;
     color: #d0021b;
-    font-weight: bold;
+    
     display:block;
 }
 
@@ -83,10 +82,33 @@
     
 
 }
-
+.container .list-product{
+    background-color:white;
+    display:grid;
+    grid-template-rows:auto auto;
+    justify-items:center;
+}
+.view-more {
+    margin-top:16px;
+    margin-bottom: 16px;
+    align-self: center;
+    border: 2px solid rgb(13,92,182);
+    border-radius: 4px;
+    color: rgb(13,92,182);
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 273px;
+    font-size: 13px;
+    text-align: center;  
+}
+.view-more:hover{
+    background:rgb(13,92,182);
+    color:azure;
+}
 
 /*#region Reponsive */
-@media only screen and (max-width: 980px)  {
+@media only screen and (max-width: 980px) {
     .grid-container{
         grid-template-columns:auto auto auto auto;
     }
@@ -174,11 +196,11 @@
     }
 
     .product-name {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .product-price {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .title-product p {

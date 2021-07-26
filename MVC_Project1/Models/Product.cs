@@ -21,8 +21,8 @@ namespace MVC_Project1.Models
         //Thông tin sản phẩm
         public string Description { get; set; }
         public int valueRating { get; set; }
-       
-        
-        
+
+
+
     }
 }
