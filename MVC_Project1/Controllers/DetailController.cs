@@ -9,20 +9,19 @@ namespace MVC_Project1.Controllers
    
     public class DetailController : HomeShopController
     {
-        #region router page detail-product
-        public ActionResult ViewDetail(string Url, string Id)
+        #region router page detail-productB
+        public ActionResult ViewDetail(string Url, int Id)
         {
-            if (string.IsNullOrEmpty(Id)) return null;
+
+          
+            if (string.IsNullOrEmpty(Id.ToString())) return null;
             
-            var getAll = Bussiness.ServicePproduct.getProducts(11, 0);
+            var getproductbyId = Bussiness.ServicePproduct.GetproductByID(Id);
          
-            var lst = getAll.ListProducts;
-            if (lst == null || getAll.Total == 0) return null;
+           
+            if (getproductbyId.Id != Id || getproductbyId == null) return null;
 
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id) && p.Url.Equals(Url));
-            if (obj == null) return null;
-
-            return View(obj);
+            return View(getproductbyId);
         }
         #endregion
 

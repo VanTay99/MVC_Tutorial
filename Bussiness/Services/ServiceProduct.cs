@@ -12,13 +12,12 @@ namespace Bussiness
     public class ServicePproduct
     {
         static ProductService.ProductSvc productSvc = new ProductService.ProductSvc();
-        #region Get Product
+        #region Get Product PageSize and PageIndex
         public static ProductService.ProductDTOResponse getProducts(int PageSize, int PageIndex)
         {
 
             var getProducts = productSvc.GetProducts(PageSize, PageIndex);
-            //return productSvc.GetProducts(PageSize, PageIndex).ListProducts;
-
+         
             return getProducts;
 
         }
@@ -29,6 +28,13 @@ namespace Bussiness
         {
             var getProducts = productSvc.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
             return getProducts;
+        }
+        #endregion
+        #region Get Product by Id
+        public static ProductService.ProductDTO GetproductByID(int ProductId)
+        {
+            var GetproductByID = productSvc.GetProductById(ProductId);
+            return GetproductByID;
         }
         #endregion
 

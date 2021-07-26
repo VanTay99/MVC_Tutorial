@@ -66,7 +66,7 @@ header {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 11px;
+            font-size: 16px;
             line-height: 16px;
         }
 
@@ -74,7 +74,7 @@ header {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 13px;
+            font-size: 20px;
             line-height: 20px;
             font-weight: 500;
         }
@@ -160,7 +160,7 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 11px;
+        font-size: 14px;
         line-height: 16px;
     }
 
@@ -168,7 +168,7 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 20px;
         font-weight: 500;
     }
@@ -12877,7 +12877,33 @@ a:link {
     color: rgb(36, 36, 36);
     font-weight: bold;
 }
+.hidden {
+    display: none;
+}
 
+.view-more {
+    align-self: center;
+    border: 1px solid rgb(13,92,182);
+    border-radius: 4px;
+    color: rgb(13,92,182);
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 240px;
+    font-size: 13px;
+    justify-self: center;
+}
+
+    .view-more:hover {
+        color: white;
+        background: rgb(13,92,182);
+    }
+
+.search-result-lable {
+    padding: 4px 8px;
+    justify-self: start;
+}
+/*reponsive*/
 @media (min-width: 1200px) and (max-width: 1400px) {
     .grid-container {
         grid-template-columns: auto auto auto auto;
@@ -12930,6 +12956,8 @@ a:link {
         max-height: 551px;
         min-width: 242px;
         min-height: 400px;
+        border-right:none;
+        border-bottom:solid 2px rgb(13,92,182);
     }
 
     .product-name {
@@ -12951,6 +12979,8 @@ a:link {
         max-height: 586px;
         min-width: 239px;
         min-height: 390px;
+        border-right: none;
+        border-bottom: solid 2px rgb(13,92,182);
     }
 
     .product-name {
@@ -12960,31 +12990,4 @@ a:link {
     .product-price {
         font-size: 16px;
     }
-}
-
-.hidden {
-    display: none;
-}
-
-.view-more {
-    align-self: center;
-    border: 1px solid rgb(13,92,182);
-    border-radius: 4px;
-    color: rgb(13,92,182);
-    text-align: center;
-    padding: 8px 12px;
-    cursor: pointer;
-    width: 240px;
-    font-size: 13px;
-    justify-self: center;
-}
-
-    .view-more:hover {
-        color: white;
-        background: rgb(13,92,182);
-    }
-
-.search-result-lable {
-    padding: 4px 8px;
-    justify-self: start;
 }

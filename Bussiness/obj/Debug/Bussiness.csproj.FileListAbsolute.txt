@@ -1,7 +1,6 @@
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\Bussiness.dll.config
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\Bussiness.dll
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\Bussiness.pdb
-D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.AssemblyReference.cache
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.dll
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.pdb
