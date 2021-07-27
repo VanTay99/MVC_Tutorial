@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Bussiness;
 namespace MVC_Project1.Controllers
 {
    
@@ -16,7 +16,7 @@ namespace MVC_Project1.Controllers
           
             if (string.IsNullOrEmpty(Id.ToString())) return null;
             
-            var obj = Bussiness.ServicePproduct.GetproductByID(Id);
+            var obj = ServiceProduct.Instance.GetProductById(Id);
          
            
             if ( obj == null) return View("~Views/HomeShop/ViewProduct.cshtml");

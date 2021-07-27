@@ -9,14 +9,34 @@ using System.IO;
 
 namespace Bussiness
 {
-    public class ServicePproduct
+     public class ServiceProduct
     {
-        static ProductService.ProductSvc productSvc = new ProductService.ProductSvc();
-        #region Get Product PageSize and PageIndex
-        public static ProductService.ProductDTOResponse getProducts(int PageSize, int PageIndex)
+        public static volatile ProductService.ProductSvc instance; //Avoid conflict Thread
+
+        static object Key = new object();
+        public static ProductService.ProductSvc Instance
+        {
+            get
+            {
+                if(instance==null)
+                {
+                    lock(Key)
+                    {
+                        instance = new ProductService.ProductSvc();
+                    }
+                }
+                return instance;
+            }
+        }
+        private ServiceProduct()
         {
 
-            var getProducts = productSvc.GetProducts(PageSize, PageIndex);
+        }
+        #region Get Product PageSize and PageIndex
+        public  ProductService.ProductDTOResponse getProducts(int PageSize, int PageIndex)
+        {
+
+            var getProducts = instance.GetProducts(PageSize, PageIndex);
          
             return getProducts;
 
@@ -24,16 +44,16 @@ namespace Bussiness
         #endregion
 
         #region Search Product
-        public static ProductService.ProductDTOResponse searchProduct(int PageSize, int PageIndex, string keyword, double minPrice, double maxPrice)
+        public  ProductService.ProductDTOResponse searchProduct(int PageSize, int PageIndex, string keyword, double minPrice, double maxPrice)
         {
-            var getProducts = productSvc.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
+            var getProducts = instance.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
             return getProducts;
         }
         #endregion
         #region Get Product by Id
-        public static ProductService.ProductDTO GetproductByID(int ProductId)
+        public  ProductService.ProductDTO GetproductByID(int ProductId)
         {
-            var GetproductByID = productSvc.GetProductById(ProductId);
+            var GetproductByID = instance.GetProductById(ProductId);
             return GetproductByID;
         }
         #endregion
