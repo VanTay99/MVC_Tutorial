@@ -14,7 +14,6 @@ D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\System.Web.Razor.xml
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\System.Web.WebPages.xml
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\CongViec\MVC_Tutorial\Bussiness\bin\Debug\System.Web.WebPages.Razor.xml
-D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.AssemblyReference.cache
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.dll

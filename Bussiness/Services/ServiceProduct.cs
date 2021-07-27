@@ -11,6 +11,7 @@ namespace Bussiness
 {
      public class ServiceProduct
     {
+        
         public static volatile ProductService.ProductSvc instance; //Avoid conflict Thread
 
         static object Key = new object();
