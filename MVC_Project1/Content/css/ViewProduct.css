@@ -78,7 +78,7 @@ a:link {
     line-height: 24px;
     margin: 0;
     color:rgb(13,92,182);
-    color: rgb(36, 36, 36);
+    
     font-weight: bold;
 }
 .hidden {
@@ -110,14 +110,14 @@ a:link {
 /*reponsive*/
 @media (min-width: 1200px) and (max-width: 1400px) {
     .grid-container {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto ;
     }
 
     .grid-item {
-        max-width: 293px;
-        max-height: 397px;
-        min-width: 271px;
-        min-height: 385px;
+        max-width: 240px;
+        max-height: 350px;
+        min-width: 220px;
+        min-height: 330px;
     }
 
     .product-name {
@@ -131,14 +131,14 @@ a:link {
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto ;
     }
 
     .grid-item {
-        max-width: 362px;
-        max-height: 470px;
-        min-width: 294px;
-        min-height: 410px;
+        max-width: 320px;
+        max-height: 420px;
+        min-width: 250px;
+        min-height: 360px;
     }
 
     .product-name {
@@ -156,10 +156,10 @@ a:link {
     }
 
     .grid-item {
-        max-width: 441px;
-        max-height: 551px;
-        min-width: 242px;
-        min-height: 400px;
+        max-width: 410px;
+        max-height: 500px;
+        min-width: 210px;
+        min-height: 350px;
         border-right:none;
         border-bottom:solid 2px rgb(13,92,182);
     }
@@ -179,10 +179,10 @@ a:link {
     }
 
     .grid-item {
-        max-width: 482px;
-        max-height: 586px;
-        min-width: 239px;
-        min-height: 390px;
+        max-width: 450px;
+        max-height: 530px;
+        min-width: 200px;
+        min-height: 350px;
         border-right: none;
         border-bottom: solid 2px rgb(13,92,182);
     }
