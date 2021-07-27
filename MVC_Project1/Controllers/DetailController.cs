@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Bussiness;
 namespace MVC_Project1.Controllers
 {
    
     public class DetailController : HomeShopController
     {
-        #region router page detail-product
-        public ActionResult ViewDetail(string Url, string Id)
+        #region detail-product
+        public ActionResult ViewDetail(string Url, int Id)
         {
-            if (string.IsNullOrEmpty(Id)) return null;
-            
-            var getAll = Bussiness.ServicePproduct.getProducts(11, 0);
-         
-            var lst = getAll.ListProducts;
-            if (lst == null || getAll.Total == 0) return null;
 
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(Id) && p.Url.Equals(Url));
-            if (obj == null) return null;
+          
+            if (string.IsNullOrEmpty(Id.ToString())) return null;
+            
+            var obj = ServiceProduct.Instance.GetProductById(Id);
+         
+           
+            if ( obj == null) return View("~Views/HomeShop/ViewProduct.cshtml");
+            if(obj.Url!=Url)
+            {
+                return RedirectToAction("ViewDetail", "Detail", new { url = obj.Url, id = obj.Id });
+            }
 
             return View(obj);
         }

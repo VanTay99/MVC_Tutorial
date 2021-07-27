@@ -27,10 +27,11 @@ namespace Bussiness.ProductService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ProductSvcSoap", Namespace="http://tempuri.org/")]
-
     public partial class ProductSvc : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback GetProductsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetProductByIdOperationCompleted;
         
         private System.Threading.SendOrPostCallback SearchProductsOperationCompleted;
         
@@ -76,6 +77,9 @@ namespace Bussiness.ProductService {
         public event GetProductsCompletedEventHandler GetProductsCompleted;
         
         /// <remarks/>
+        public event GetProductByIdCompletedEventHandler GetProductByIdCompleted;
+        
+        /// <remarks/>
         public event SearchProductsCompletedEventHandler SearchProductsCompleted;
         
         /// <remarks/>
@@ -106,6 +110,35 @@ namespace Bussiness.ProductService {
             if ((this.GetProductsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetProductsCompleted(this, new GetProductsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetProductById", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ProductDTO GetProductById(int productId) {
+            object[] results = this.Invoke("GetProductById", new object[] {
+                        productId});
+            return ((ProductDTO)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetProductByIdAsync(int productId) {
+            this.GetProductByIdAsync(productId, null);
+        }
+        
+        /// <remarks/>
+        public void GetProductByIdAsync(int productId, object userState) {
+            if ((this.GetProductByIdOperationCompleted == null)) {
+                this.GetProductByIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetProductByIdOperationCompleted);
+            }
+            this.InvokeAsync("GetProductById", new object[] {
+                        productId}, this.GetProductByIdOperationCompleted, userState);
+        }
+        
+        private void OnGetProductByIdOperationCompleted(object arg) {
+            if ((this.GetProductByIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetProductByIdCompleted(this, new GetProductByIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -218,7 +251,7 @@ namespace Bussiness.ProductService {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ProductDTO {
         
-        private string idField;
+        private int idField;
         
         private string nameField;
         
@@ -229,7 +262,7 @@ namespace Bussiness.ProductService {
         private string thumbField;
         
         /// <remarks/>
-        public string Id {
+        public int Id {
             get {
                 return this.idField;
             }
@@ -301,6 +334,32 @@ namespace Bussiness.ProductService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((ProductDTOResponse)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetProductByIdCompletedEventHandler(object sender, GetProductByIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetProductByIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetProductByIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ProductDTO Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ProductDTO)(this.results[0]));
             }
         }
     }

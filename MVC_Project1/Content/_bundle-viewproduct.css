@@ -66,7 +66,7 @@ header {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 11px;
+            font-size: 16px;
             line-height: 16px;
         }
 
@@ -74,7 +74,7 @@ header {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 13px;
+            font-size: 20px;
             line-height: 20px;
             font-weight: 500;
         }
@@ -160,7 +160,7 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 11px;
+        font-size: 14px;
         line-height: 16px;
     }
 
@@ -168,7 +168,7 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 20px;
         font-weight: 500;
     }
@@ -229,6 +229,7 @@ footer{
     color: #000;
     font-weight: bold;
     margin-bottom: 0;
+    font-size:25px;
 }
 
     .container-footer .about h2:before {
@@ -281,6 +282,7 @@ footer{
     color: #000;
     font-weight: bold;
     margin-bottom: 0;
+    font-size: 25px;
 }
 
     .links h2::before {
@@ -318,6 +320,7 @@ footer{
     color: #000;
     font-weight: bold;
     margin-bottom: 0;
+    font-size: 25px;
 }
 
     .contact h2::before {
@@ -463,6 +466,10 @@ footer{
             font-weight: 500;
             align-self: center;
         }
+    .social-icon li a {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -525,15 +532,34 @@ footer{
         .user-shortcut .cart-item .cart-lable {
             display: none;
         }
+    .container-footer .about h2{
+        font-size: 20px;
 
-    .footer-content {
-        grid-template-columns: auto auto auto;
-        justify-content: unset;
+    }
+    .container-footer .contact h2 {
+        font-size: 20px;
+    }
+    .container-footer .links h2{
+        font-size: 20px;
+
+    }
+    .social-icon li a:hover {
+        background: rgb(26, 148, 255);
     }
 
-    .about-tiki, .payment-method {
-        display: none;
+    .social-icon li a .fa {
+        color: #ffffff;
+        font-size: 14px;
     }
+    .social-icon li a {
+       
+        width: 20px;
+        height: 20px;
+       
+    }
+
+
+   
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
@@ -598,15 +624,30 @@ footer{
             display: none;
             align-items:center;
         }
-
-    .footer-content {
-        grid-template-columns: auto auto;
-        justify-content: unset;
+    .container-footer .about h2 {
+        font-size: 18px;
     }
 
-    .about-tiki, .co-operation, .payment-method {
-        display: none;
+    .container-footer .contact h2 {
+        font-size: 18px;
     }
+
+    .container-footer .links h2 {
+        font-size: 18px;
+    }
+    .social-icon li a:hover {
+        background: rgb(26, 148, 255);
+    }
+
+    .social-icon li a .fa {
+        color: #ffffff;
+        font-size: 14px;
+    }
+    .social-icon li a {
+        width: 20px;
+        height: 20px;
+    }
+
 }
 
 /* cyrillic-ext */
@@ -12874,94 +12915,9 @@ a:link {
     line-height: 24px;
     margin: 0;
     color:rgb(13,92,182);
-    color: rgb(36, 36, 36);
+    
     font-weight: bold;
 }
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-    .grid-container {
-        grid-template-columns: auto auto auto auto;
-    }
-
-    .grid-item {
-        max-width: 293px;
-        max-height: 397px;
-        min-width: 271px;
-        min-height: 385px;
-    }
-
-    .product-name {
-        font-size: 18px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-    .grid-container {
-        grid-template-columns: auto auto auto;
-    }
-
-    .grid-item {
-        max-width: 362px;
-        max-height: 470px;
-        min-width: 294px;
-        min-height: 410px;
-    }
-
-    .product-name {
-        font-size: 18px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
-    .grid-container {
-        grid-template-columns: auto auto;
-    }
-
-    .grid-item {
-        max-width: 441px;
-        max-height: 551px;
-        min-width: 242px;
-        min-height: 400px;
-    }
-
-    .product-name {
-        font-size: 16px;
-    }
-
-    .product-price {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 576px) {
-    .grid-container {
-        grid-template-columns: auto;
-    }
-
-    .grid-item {
-        max-width: 482px;
-        max-height: 586px;
-        min-width: 239px;
-        min-height: 390px;
-    }
-
-    .product-name {
-        font-size: 18px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-}
-
 .hidden {
     display: none;
 }
@@ -12988,3 +12944,93 @@ a:link {
     padding: 4px 8px;
     justify-self: start;
 }
+/*reponsive*/
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .grid-container {
+        grid-template-columns: auto auto auto auto ;
+    }
+
+    .grid-item {
+        max-width: 240px;
+        max-height: 350px;
+        min-width: 220px;
+        min-height: 330px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: auto auto auto ;
+    }
+
+    .grid-item {
+        max-width: 320px;
+        max-height: 420px;
+        min-width: 250px;
+        min-height: 360px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .grid-item {
+        max-width: 410px;
+        max-height: 500px;
+        min-width: 210px;
+        min-height: 350px;
+        border-right:none;
+        border-bottom:solid 2px rgb(13,92,182);
+    }
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .grid-item {
+        max-width: 450px;
+        max-height: 530px;
+        min-width: 200px;
+        min-height: 350px;
+        border-right: none;
+        border-bottom: solid 2px rgb(13,92,182);
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+}
+
+

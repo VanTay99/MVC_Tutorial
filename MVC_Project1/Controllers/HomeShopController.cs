@@ -19,11 +19,13 @@ namespace MVC_Project1.Controllers
             double maxPrice = 10000000;
             if (!isSearching)
             {
-                getProducts = Bussiness.ServicePproduct.getProducts(PageSize, PageIndex);
+                //getProducts = Bussiness.ProductService.getProducts(PageSize, PageIndex);
+
+                getProducts = ServiceProduct.Instance.GetProducts(PageSize, PageIndex);
             }
             else
             {
-                getProducts = Bussiness.ServicePproduct.searchProduct(PageSize, PageIndex, keyword, minPrice, maxPrice);
+                getProducts = ServiceProduct.Instance.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
             }
             var remain = getProducts.Remain;
 
@@ -33,7 +35,7 @@ namespace MVC_Project1.Controllers
                 var JSON = Json(new
                 {
                     remain = remain,
-                    html = Bussiness.ServicePproduct.RenderViewToString(ControllerContext, "~/Views/HomeShop/ListProduct.cshtml", getProducts, true)
+                    html = Bussiness.ServiceProduct.RenderViewToString(ControllerContext, "~/Views/HomeShop/ListProduct.cshtml", getProducts, true)
                 }); ;
 
                
@@ -52,7 +54,7 @@ namespace MVC_Project1.Controllers
             double minPrice = 0;
             double maxPrice = 10000000;
             var PageIndex = 0;
-            var searchProducts = Bussiness.ServicePproduct.searchProduct(PageSize, PageIndex, search, minPrice, maxPrice);
+            var searchProducts = ServiceProduct.Instance.SearchProducts(PageSize, PageIndex, search, minPrice, maxPrice);
           
 
 
