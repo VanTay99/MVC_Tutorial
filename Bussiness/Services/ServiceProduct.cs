@@ -11,33 +11,29 @@ namespace Bussiness
 {
      public class ServiceProduct
     {
+<<<<<<< HEAD
         
         public static volatile ProductService.ProductSvc instance; //Avoid conflict Thread
 
         static object Key = new object();
         public static ProductService.ProductSvc Instance
+=======
+        private static ServiceProduct _instance;
+        private readonly ProductService.ProductSvc _svcProduct;
+        public static ServiceProduct Instance
+>>>>>>> 43b01b08d8f4472b209e2930941448d644762e7d
         {
-            get
-            {
-                if(instance==null)
-                {
-                    lock(Key)
-                    {
-                        instance = new ProductService.ProductSvc();
-                    }
-                }
-                return instance;
-            }
+            get { return _instance ?? (_instance = new ServiceProduct()); }
         }
         private ServiceProduct()
         {
-
+            _svcProduct = new ProductService.ProductSvc();
         }
         #region Get Product PageSize and PageIndex
         public  ProductService.ProductDTOResponse getProducts(int PageSize, int PageIndex)
         {
 
-            var getProducts = instance.GetProducts(PageSize, PageIndex);
+            var getProducts = _svcProduct.GetProducts(PageSize, PageIndex);
          
             return getProducts;
 
@@ -47,14 +43,14 @@ namespace Bussiness
         #region Search Product
         public  ProductService.ProductDTOResponse searchProduct(int PageSize, int PageIndex, string keyword, double minPrice, double maxPrice)
         {
-            var getProducts = instance.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
+            var getProducts = _svcProduct.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
             return getProducts;
         }
         #endregion
         #region Get Product by Id
         public  ProductService.ProductDTO GetproductByID(int ProductId)
         {
-            var GetproductByID = instance.GetProductById(ProductId);
+            var GetproductByID = _svcProduct.GetProductById(ProductId);
             return GetproductByID;
         }
         #endregion
