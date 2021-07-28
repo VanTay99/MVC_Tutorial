@@ -196,6 +196,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DetailController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Support\Helper.cs" />
     <Compile Include="Controllers\HomeShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -217,8 +220,14 @@
   <ItemGroup>
     <Content Include="Content\asp\gethint.asp" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\css\search.css" />
     <Content Include="Content\css\ViewDetail.css" />
     <Content Include="Content\css\ViewProduct.css" />
+    <Content Include="Content\css\_bundle-search.css" />
+    <Content Include="Content\_bundle-search.css" />
+    <Content Include="Content\_bundle-search.min.css">
+      <DependentUpon>_bundle-search.css</DependentUpon>
+    </Content>
     <Content Include="Content\font.css" />
     <Content Include="Content\images\1.jpg" />
     <Content Include="Content\images\10.jpg" />
@@ -268,6 +277,18 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\bundleJS\_bundle-detail.js" />
+    <Content Include="Scripts\bundleJS\_bundle-detail.min.js">
+      <DependentUpon>_bundle-detail.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bundleJS\_bundle-Index.js" />
+    <Content Include="Scripts\bundleJS\_bundle-Index.min.js">
+      <DependentUpon>_bundle-Index.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bundleJS\_bundle-search.js" />
+    <Content Include="Scripts\bundleJS\_bundle-search.min.js">
+      <DependentUpon>_bundle-search.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
@@ -281,22 +302,16 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\js\demoAjax.js" />
-    <Content Include="Scripts\js\detail.js" />
-    <Content Include="Scripts\js\detail.min.js">
-      <DependentUpon>detail.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\js\Index.js" />
-    <Content Include="Scripts\js\Index.min.js">
-      <DependentUpon>Index.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\js\index.js" />
     <Content Include="Scripts\js\search.js" />
+    <Content Include="Scripts\js\site.js" />
     <Content Include="Scripts\js\viewdetail.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web References\ProductService\ProductDTOResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
     <None Include="Web References\ProductService\ProductSvc.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -18,3 +18,4 @@ D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.dll
 D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.pdb
+D:\CongViec\MVC_Tutorial\Bussiness\obj\Debug\Bussiness.csproj.AssemblyReference.cache

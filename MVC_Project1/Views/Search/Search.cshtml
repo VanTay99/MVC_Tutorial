@@ -1,0 +1,45 @@
+﻿
+@model Bussiness.ProductService.ProductDTOResponse
+
+@section css{
+    <link href="~/Content/_bundle-search.min.css" rel="stylesheet" />
+}
+
+<head>
+    <link href="~/Scripts/jquery-3.6.0.min.js" />
+</head>
+
+<div class="container search-product">
+
+    @if (Model != null)
+    {
+<div class="search-result-lable hidden">Kết quả tìm kiếm cho "<span style="font-weight: bold" class="search-keyword"></span>"</div>
+                <div class="list-product-body">
+                    <div class="price-filter">
+                        Price Filter
+                        <div class="price-form">
+                            <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" id="input-minPrice" name="minPrice" value="" placeholder="0"><br />
+                            <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" id="input-maxPrice" name="manPrice" value="" placeholder="1000000000"><br />
+                            <button type="submit" class="" id="btnSearchByPrice">Search</button>
+                        </div>
+
+                    </div>
+                    <div class="products-fitlered">
+                        <div class="grid-container">
+                            @Html.Partial("~/Views/HomeShop/ListProduct.cshtml", Model)
+                        </div>
+                        @if (Model != null && Model.Remain > 0)
+                        {
+        <button class="btn view-more" id="btnViewMore">Xem thêm <span id="remain">@Model.Remain</span> sản phẩm</button>}
+                    </div>
+                </div> }
+                            else
+                            {
+                <div>Không tìm thấy yêu cầu của bạn</div>}
+
+
+</div>
+
+@section scripts{
+    <script src="~/Scripts/bundleJS/_bundle-search.min.js"></script>
+}

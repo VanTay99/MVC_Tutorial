@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Bussiness;
+using Bussiness.ProductService;
 
 namespace MVC_Project1.Controllers
 {
@@ -12,33 +13,19 @@ namespace MVC_Project1.Controllers
     {
         private const int PageSize = 5;
         #region fetch data view-more button
-        public ActionResult fetchData(int PageIndex, Boolean isSearching, string keyword)
+        public ActionResult fetchData(int PageIndex)
         {
-            Bussiness.ProductService.ProductDTOResponse getProducts;
-            double minPrice = 0;
-            double maxPrice = 10000000;
-            if (!isSearching)
-            {
-                //getProducts = Bussiness.ProductService.getProducts(PageSize, PageIndex);
-
-                getProducts = ServiceProduct.Instance.GetProducts(PageSize, PageIndex);
-            }
-            else
-            {
-                getProducts = ServiceProduct.Instance.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
-            }
-            var remain = getProducts.Remain;
+            ProductDTOResponse getProducts;
+            getProducts = ServiceProduct.Instance.getProducts(PageSize, PageIndex);
 
             var listProducts = getProducts.ListProducts;
             if (listProducts != null)
             {
                 var JSON = Json(new
                 {
-                    remain = remain,
-                    html = Bussiness.ServiceProduct.RenderViewToString(ControllerContext, "~/Views/HomeShop/ListProduct.cshtml", getProducts, true)
+                    remain = getProducts.Remain,
+                    html = Helper.RenderViewToString(ControllerContext, "~/Views/HomeShop/ListProduct.cshtml", getProducts, true)
                 }); ;
-
-               
                 return JSON;
             }
             else
@@ -51,14 +38,13 @@ namespace MVC_Project1.Controllers
         #region get and search product
         public ActionResult ViewProduct(string search)
         {
-            double minPrice = 0;
-            double maxPrice = 10000000;
             var PageIndex = 0;
-            var searchProducts = ServiceProduct.Instance.SearchProducts(PageSize, PageIndex, search, minPrice, maxPrice);
-          
-
-
-            return View(searchProducts);
+            var searchProducts = ServiceProduct.Instance.getProducts(PageSize, PageIndex);
+            if (searchProducts != null)
+            {
+                return View(searchProducts);
+            }
+            else return null;
         }
         #endregion
 

@@ -1,4 +1,12 @@
 ﻿
+let inputValue = document.getElementById('inputValue');
+var newVal;
+const xhttp = new XMLHttpRequest();
+xhttp.status
+function handleChange() {
+    inputValue = document.getElementById('inputValue');
+    alert(inputValue.value);
+}
 function giam() {
     var result = document.getElementById('quantity');
     var qty = result.value;

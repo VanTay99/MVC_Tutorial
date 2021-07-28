@@ -18,16 +18,35 @@
     ]
   },
   {
-    "outputFileName": "Scripts/js/Index.js",
+    "outputFileName": "Content/css/_bundle-search.css",
     "inputFiles": [
-      "Scripts/js/demoAjax.js",
-      "Scripts/js/search.js"
+      "Content/css/search.css",
+      "Content/Site.css",
+      "Content/font.css",
+      "Content/bootstrap.css"
     ]
   },
   {
-    "outputFileName": "Scripts/js/detail.js",
+    "outputFileName": "Scripts/bundleJS/_bundle-Index.js",
     "inputFiles": [
-      "Scripts/js/viewdetail.js",
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/site.js",
+      "Scripts/js/index.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bundleJS/_bundle-detail.js",
+    "inputFiles": [
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/site.js",
+      "Scripts/js/viewdetail.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bundleJS/_bundle-search.js",
+    "inputFiles": [
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/site.js",
       "Scripts/js/search.js"
     ]
   }
